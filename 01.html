@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,55 +8,66 @@
     <title>Document</title>
 
     <style>
-        h1{
-            background-color: pink;
-            width: 500px;
-            height: 500px;
-        }
-        span{
-            background-color:rgb(109, 45, 173);
-            color: seashell;
-            width: 500px;
-            height: 500px;
-        }
-        a{
-            /* display: inline-block;; */
-            background-color: #fa0;
-            width: 500px;
-            height: 500px;
-        }
-        P{
-            display: list-item;
-            background-color: #999;
-            width: 500px;
-            height: 500px;
-        }
-        article{
-            background-color: #999;
-        }
-        li{
-            background-color: #999;
-            display: list-item;
+        .wrap {
+            width: 600px;
+            background-color: limegreen;
+            height: 600px;
+            /* margin: 40px; */
+            /* font-size: 50px; */
+            display: flex;
 
+
+            /* flex-wrap: wrap; */
+        }
+
+        .item {
+            width: 100px;
+            height: 100px;
+            flex-basis: 50px;
+            background-color: #faa;
+            /* margin: 4px; */
+            font-size: 50px;
+            /* text-align: center; */
+        }
+
+        .item1 {
+            background-color: #faa;
+            /* flex-grow: 1; */
+        }
+
+        .item2 {
+            background-color: #faf;
+            /* flex-grow: 1; */
+        }
+
+        .item3 {
+            background-color: #fa0;
+            /* flex-grow: 1; */
         }
     </style>
+
 </head>
+
 <body>
-    
-<h1>111</h1>
-<span>222</span>
-<a href="#">333</a>
-<p>444</p>
-<article>555</article>
 
 
 
-<ul>
-    <li>666</li>
-    <li>666</li>
-</ul>
+
+
+
+
+
+    <div class="wrap">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+    </div>
+
+
+
 
 
 
 </body>
+
 </html>
