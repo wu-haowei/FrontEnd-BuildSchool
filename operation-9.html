@@ -20,7 +20,6 @@
             height: auto;
             background-attachment: fixed;
             background-size: cover;
-
         }
 
         .amos_a {
@@ -28,7 +27,22 @@
             width: 100%;
             height: auto;
             background-size: cover;
-            /* filter: grayscale(0); */
+            position: relative;
+            z-index: 1;
+        }
+
+        .qqq {
+            position: absolute;
+            background-color: rgba(0, 0, 255, 0.445);
+            top: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .amos_a p {
+            z-index: -1;
         }
 
         .fs-7 {
@@ -91,6 +105,14 @@
                 display: none;
             }
         }
+
+        .Cooperation {
+            margin: auto;
+
+            border-top: 5px solid rgb(12, 7, 7);
+            margin: 10px;
+            background-color: rgba(173, 171, 171, 0.5);
+        }
     </style>
 </head>
 
@@ -103,7 +125,7 @@
             <div class="row py-5 ">
                 <div class="col-12 col-lg-1 d-flex p-0 w-auto ">
                     <span class="w-30">
-                        <a class="text-decoration-none ps-3" href="#"><img
+                        <a class="text-decoration-none ps-3" target="_blank" href="#"><img
                                 src="https://static.wixstatic.com/media/5a71f2_1e714a102af34089a58b0544cc0ca35d~mv2.png/v1/fill/w_68,h_74,al_c,q_85,usm_0.66_1.00_0.01/5a71f2_1e714a102af34089a58b0544cc0ca35d~mv2.webp"></a>
                     </span>
                 </div>
@@ -119,17 +141,17 @@
                 <div class="col-12 col-lg-8 d-flex w-auto align-items-center ">
                     <nav>
                         <a class="text-decoration-none p-1"
-                            href="https://docs.google.com/presentation/d/e/2PACX-1vR_bJBOVwI5dxpvGpHjxf_IudLWApraTJpXCPfLDHkrYBM_JW48_82wdnfoecd8sZJ588pn9o961vpy/pub?start=false&loop=false&delayms=60000&slide=id.p1"><span
-                                class=" text-light ">台北班簡介</span></a>
+                            href="https://docs.google.com/presentation/d/e/2PACX-1vR_bJBOVwI5dxpvGpHjxf_IudLWApraTJpXCPfLDHkrYBM_JW48_82wdnfoecd8sZJ588pn9o961vpy/pub?start=false&loop=false&delayms=60000&slide=id.p1"
+                            target="_blank"><span class=" text-light ">台北班簡介</span></a>
                         <a class="text-decoration-none  p-1"
-                            href="https://docs.google.com/presentation/d/e/2PACX-1vTza7IHn1q6V0mSseOmqZWvWPNtbDsMNTgrN-Knb7hxib-ZPoUa5Pg1jQn4R22skyTlk0dUWHV1j9Du/pub?start=false&loop=true&delayms=60000&slide=id.p1"><span
-                                class="text-light">新竹班簡介</span></a>
-                        <a class="text-decoration-none  p-1" href="https://www.build-school.com/buildthefuture"><span
-                                class="text-light">校友會-台灣青築未來協會 Build the
+                            href="https://docs.google.com/presentation/d/e/2PACX-1vTza7IHn1q6V0mSseOmqZWvWPNtbDsMNTgrN-Knb7hxib-ZPoUa5Pg1jQn4R22skyTlk0dUWHV1j9Du/pub?start=false&loop=true&delayms=60000&slide=id.p1"
+                            target="_blank"><span class="text-light">新竹班簡介</span></a>
+                        <a class="text-decoration-none  p-1" href="https://www.build-school.com/buildthefuture"
+                            target="_blank"><span class="text-light">校友會-台灣青築未來協會 Build the
                                 Future</span></a>
-                        <a class="text-decoration-none  p-1" href="https://blog.build-school.com/"><span
+                        <a class="text-decoration-none  p-1" href="https://blog.build-school.com/" target="_blank"><span
                                 class="text-light">Blog</span></a>
-                        <a class="text-decoration-none  p-1" href="https://blog.build-school.com/"><span
+                        <a class="text-decoration-none  p-1" href="https://blog.build-school.com/" target="_blank"><span
                                 class="text-light">歷屆老師</span></a>
                         <a class="text-decoration-none  p-1" href="#"><span class="text-light">問題洽詢</span></a>
                     </nav>
@@ -147,7 +169,7 @@
                 <div class="col-4 d-flex justify-content-center">
 
                     <a class="text-decoration-none bg-primary d-flex align-items-center py-3 w-75"
-                        href="https://blog.build-school.com/2020/02/25/bs20-tpe-spring-opening/">
+                        href="https://blog.build-school.com/2020/02/25/bs20-tpe-spring-opening/" target="_blank">
                         <h2 class="p-1 text-light text-decoration-none m-0 w-100">台北班簡介及報名(2021/4/28開課)</h2>
                     </a>
 
@@ -155,7 +177,7 @@
                 <div class="col-4 d-flex justify-content-center">
 
                     <a class="text-decoration-none bg-primary d-flex align-items-center py-3 w-75"
-                        href="https://blog.build-school.com/2020/02/25/bs20-tpe-spring-opening/">
+                        href="https://blog.build-school.com/2020/02/25/bs20-tpe-spring-opening/" target="_blank">
                         <h2 class="p-1 text-light text-decoration-none m-0 w-100">新竹班簡介(2021/11月後)</h2>
                     </a>
 
@@ -163,10 +185,10 @@
                 <div class="col-4 d-flex justify-content-center">
 
                     <a class="text-decoration-none bg-primary d-flex align-items-center py-3 w-75"
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSeE2im_uTi-DTMdaK08uDWIN6_1Vm8jpGKxv8W34Iy7TbRKAw/viewform">
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSeE2im_uTi-DTMdaK08uDWIN6_1Vm8jpGKxv8W34Iy7TbRKAw/viewform"
+                        target="_blank">
                         <h2 class="p-1 text-light text-decoration-none m-0 w-100">招生說明會報名</h2>
                     </a>
-
                 </div>
             </div>
         </div>
@@ -266,8 +288,10 @@
 
 
     <div class="amos_a shadow-lg bg-body rounded ">
+
         <p class=" text-white fs-4 fw-bold  d-flex justify-content-center align-items-center py-5 ">
             18 - 24週的實作及作品開發 - 從訓練、就業、到企業連結</p>
+        <div class="qqq"></div>
     </div>
 
 
@@ -349,6 +373,8 @@
 
 
     <div class="amos_a shadow-lg bg-body rounded">
+        <div class="qqq"></div>
+
         <p class=" text-white fs-4 fw-bold  d-flex justify-content-center align-items-center py-5">
             在課程及作品實作中，將採用這些工具 - 熟悉實務上軟體開發團隊的運作、分工及真實專案的流程</p>
     </div>
@@ -426,6 +452,8 @@
 
 
     <div class="amos_a shadow-lg bg-body rounded">
+        <div class="qqq"></div>
+
         <p class=" text-white fs-4 fw-bold  d-flex justify-content-center align-items-center py-5">
             我們的講師及企業導師擁有在這些公司的工作經歷、擔任主管或資深工程師 </p>
     </div>
@@ -491,98 +519,98 @@
 
 
     <!-- 合作及接洽 -->
-
-    <div class="main_a container w-100 mx-auto">
-        <div class="row d-flex">
-            <div class=" col-lg-6 d-flex flex-column align-items-center ">
-                <span class="w-50 d-flex">合作及接洽</span>
-                <p class="w-50">
-                    若為企業欲徵才、或非營利組織或公益團體希望參加我們的培訓或公益合作、或成為我們的講師或擔任指導學生的企業導師 (Inspire Mentor)，請與我們連絡</p>
-            </div>
-            <div class=" col-lg-6 d-flex align-items-center ">
-                <p> <span class=" w-50"> Build School​ 青杉人才有限公司</span><br>
-                    <span class=" w-50">社團法人台灣青築未來協會 Build the Future</span><br>
-                    <span class=" w-50">(內政部立案 : 台內團字第 1090033261 號)</span><br>
-                    <span class=" w-50">email: contact@build-school.com 電話: 02-66057606</span><br>
-                    ​<span class=" w-50">台北市忠孝東路三段96號11F-1 (台北科大對面/忠孝新生站3號出口)</span><br>
-                </p>
-            </div>
-        </div>
-    </div>
-    <!-- ------------------------------------ -->
-
-
-
-
-    <div class="main_b container w-100 mx-auto">
-        <div class="row d-flex">
-            <div class=" d-flex flex-column align-items-center py-3 ">
-                <span class="w-50 d-flex justify-content-center ">合作及接洽</span>
-                <p class="w-50">
-                    若為企業欲徵才、或非營利組織或公益團體希望參加我們的培訓或公益合作、或成為我們的講師或擔任指導學生的企業導師 (Inspire Mentor)，請與我們連絡</p>
-            </div>
-            <div class="d-flex py-3">
-                <p class="d-flex flex-column align-items-center mx-auto"> <span class=" w-50"> Build School​
-                        青杉人才有限公司</span>
-                    <span class=" w-70">社團法人台灣青築未來協會 Build the Future</span>
-                    <span class=" w-70">(內政部立案 : 台內團字第 1090033261 號)</span>
-                    <span class=" w-70">email: contact@build-school.com 電話: 02-66057606</span>
-                    <span class=" w-70">台北市忠孝東路三段96號11F-1 (台北科大對面/忠孝新生站3號出口)</span>
-
-                </p>
-            </div>
-
-
-        </div>
-    </div>
-
-
-
-
-    <!-- ------------------------------------ -->
-
-    <div class="main_a container w-100 ">
-        <div class="row">
-            <div class=" col-md-6 d-flex align-items-center">
-                <a href="https://www.facebook.com/buildschool.edu/"><img class="w-70 p-1"
-                        src="https://static.wixstatic.com/media/e316f544f9094143b9eac01f1f19e697.png/v1/fill/w_35,h_35,al_c,q_85,usm_0.66_1.00_0.01/e316f544f9094143b9eac01f1f19e697.webp"
-                        alt=""></a>
-                <a href="https://www.youtube.com/channel/UC4dTBtbEIwhtKRy2UhkVYig"><img class="  w-70 p-1"
-                        src="https://static.wixstatic.com/media/a1b09fe8b7f04378a9fe076748ad4a6a.png/v1/fill/w_35,h_35,al_c,q_85,usm_0.66_1.00_0.01/a1b09fe8b7f04378a9fe076748ad4a6a.webp"
-                        alt=""></a>
-                <a class="text-dark p-1 " href="#">隱私權宣告</a>
-            </div>
-
-            <div class="row py-5 w-50 d-flex justify-content-end p-0">
-                <div class="col-md-6 d-flex justify-content-end p-0">
-                    <p class="w-100 m-0 d-flex justify-content-end"> ©2020 by Build School</p>
+    <div class="Cooperation">
+        <div class="main_a container w-100 mx-auto">
+            <div class="row d-flex pt-5">
+                <div class=" col-lg-6 d-flex flex-column align-items-center ">
+                    <span class="w-50 d-flex">合作及接洽</span>
+                    <p class="w-50">
+                        若為企業欲徵才、或非營利組織或公益團體希望參加我們的培訓或公益合作、或成為我們的講師或擔任指導學生的企業導師 (Inspire Mentor)，請與我們連絡</p>
+                </div>
+                <div class=" col-lg-6 d-flex align-items-center ">
+                    <p> <span class=" w-50"> Build School​ 青杉人才有限公司</span><br>
+                        <span class=" w-50">社團法人台灣青築未來協會 Build the Future</span><br>
+                        <span class=" w-50">(內政部立案 : 台內團字第 1090033261 號)</span><br>
+                        <span class=" w-50">email: contact@build-school.com 電話: 02-66057606</span><br>
+                        ​<span class=" w-50">台北市忠孝東路三段96號11F-1 (台北科大對面/忠孝新生站3號出口)</span><br>
+                    </p>
                 </div>
             </div>
         </div>
-    </div>
+        <!-- ------------------------------------ -->
 
 
-    <div class="main_b container w-100 ">
-        <div class="row">
-            <div class=" d-flex justify-content-center align-items-center">
-                <a href="https://www.facebook.com/buildschool.edu/"><img class="w-70 p-1"
-                        src="https://static.wixstatic.com/media/e316f544f9094143b9eac01f1f19e697.png/v1/fill/w_35,h_35,al_c,q_85,usm_0.66_1.00_0.01/e316f544f9094143b9eac01f1f19e697.webp"
-                        alt=""></a>
-                <a href="https://www.youtube.com/channel/UC4dTBtbEIwhtKRy2UhkVYig"><img class="  w-70 p-1"
-                        src="https://static.wixstatic.com/media/a1b09fe8b7f04378a9fe076748ad4a6a.png/v1/fill/w_35,h_35,al_c,q_85,usm_0.66_1.00_0.01/a1b09fe8b7f04378a9fe076748ad4a6a.webp"
-                        alt=""></a>
-                <a class="text-dark p-1 " href="#">隱私權宣告</a>
+
+
+        <div class="main_b container w-100 mx-auto">
+            <div class="row d-flex pt-5">
+                <div class=" d-flex flex-column align-items-center py-3 ">
+                    <span class="w-50 d-flex justify-content-center ">合作及接洽</span>
+                    <p class="w-50">
+                        若為企業欲徵才、或非營利組織或公益團體希望參加我們的培訓或公益合作、或成為我們的講師或擔任指導學生的企業導師 (Inspire Mentor)，請與我們連絡</p>
+                </div>
+                <div class="d-flex py-3">
+                    <p class="d-flex flex-column align-items-center mx-auto"> <span class=" w-50"> Build School​
+                            青杉人才有限公司</span>
+                        <span class=" w-70">社團法人台灣青築未來協會 Build the Future</span>
+                        <span class=" w-70">(內政部立案 : 台內團字第 1090033261 號)</span>
+                        <span class=" w-70">email: contact@build-school.com 電話: 02-66057606</span>
+                        <span class=" w-70">台北市忠孝東路三段96號11F-1 (台北科大對面/忠孝新生站3號出口)</span>
+
+                    </p>
+                </div>
+
+
             </div>
+        </div>
 
-            <div class=" py-5  ">
-                <div class="">
-                    <p class="w-100 d-flex justify-content-center"> ©2020 by Build School</p>
+
+
+
+        <!-- ------------------------------------ -->
+
+        <div class="main_a container w-100 ">
+            <div class="row">
+                <div class=" col-md-6 d-flex align-items-center justify-content-center ">
+                    <a href="https://www.facebook.com/buildschool.edu/"><img class="w-70 p-1"
+                            src="https://static.wixstatic.com/media/e316f544f9094143b9eac01f1f19e697.png/v1/fill/w_35,h_35,al_c,q_85,usm_0.66_1.00_0.01/e316f544f9094143b9eac01f1f19e697.webp"
+                            alt=""></a>
+                    <a href="https://www.youtube.com/channel/UC4dTBtbEIwhtKRy2UhkVYig"><img class="  w-70 p-1"
+                            src="https://static.wixstatic.com/media/a1b09fe8b7f04378a9fe076748ad4a6a.png/v1/fill/w_35,h_35,al_c,q_85,usm_0.66_1.00_0.01/a1b09fe8b7f04378a9fe076748ad4a6a.webp"
+                            alt=""></a>
+                    <a class="text-dark p-1 " href="#">隱私權宣告</a>
+                </div>
+
+                <div class="row py-5 w-50 d-flex justify-content-center p-0">
+                    <div class="col-md-6 d-flex justify-content-center p-0">
+                        <p class="w-100 m-0 d-flex justify-content-center "> ©2020 by Build School</p>
+                    </div>
                 </div>
             </div>
         </div>
+
+
+        <div class="main_b container w-100 ">
+            <div class="row">
+                <div class=" d-flex justify-content-center align-items-center">
+                    <a href="https://www.facebook.com/buildschool.edu/"><img class="w-70 p-1"
+                            src="https://static.wixstatic.com/media/e316f544f9094143b9eac01f1f19e697.png/v1/fill/w_35,h_35,al_c,q_85,usm_0.66_1.00_0.01/e316f544f9094143b9eac01f1f19e697.webp"
+                            alt=""></a>
+                    <a href="https://www.youtube.com/channel/UC4dTBtbEIwhtKRy2UhkVYig"><img class="w-70 p-1"
+                            src="https://static.wixstatic.com/media/a1b09fe8b7f04378a9fe076748ad4a6a.png/v1/fill/w_35,h_35,al_c,q_85,usm_0.66_1.00_0.01/a1b09fe8b7f04378a9fe076748ad4a6a.webp"
+                            alt=""></a>
+                    <a class="text-dark p-1 " href="#">隱私權宣告</a>
+                </div>
+
+                <div class=" py-5  ">
+                    <div class="">
+                        <p class="w-100 d-flex justify-content-center"> ©2020 by Build School</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
-
-
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
