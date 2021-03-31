@@ -13,207 +13,113 @@
             list-style: none;
         }
 
-
-        .containre {
-
-            display: flex;
-            flex-wrap: wrap;
+        .nav {
+            background-color: #ccc;
         }
 
-        .item {
-            background-color: plum;
-            height: 200px;
-            margin: 15px;
-            /* border: 1px solid red; */
+        .nav a {
+            display: block;
+            padding: 10px 20px;
+            border: 1px solid red;
+            text-decoration: none;
         }
 
-        [class*='col'] {
-            padding: 0 15px;
-            box-sizing: border-box;
+
+        @media screen and (max-width: 767px) {
+            .nav .btn-sub-control {
+                width: 40px;
+
+            }
+
+            .nav li {
+                display: flex;
+
+            }
+
+            .nav>ul {}
+
+            .nav a {
+                flex-grow: 1;
+            }
+
+            .nav a:hover {
+                background-color: yellow;
+            }
+
+            .nav>ul ul {
+                display: none;
+                /* position: absolute; */
+     
+                
+            }
+
+            .nav li:hover ul {
+                display: block;
+            }
         }
-        .col-1 {
-            width: 8.333333%;
-        }
-        .col-2 {
-            width: 16.666666%;
-        }
-        .col-3 {
-            width: 25%;
-        }
-        .col-4 {
-            width: 33.3333333%;
-        }
-        .col-5 {
-            width: 41.6666666%;
-        }
-        .col-6 {
-            width: 50%;
-        }
-        .col-7 {
-            width: 58.33333333%;
-        }
-        .col-8 {
-            width: 66.666666666%;
-        }
-        .col-9 {
-            width: 75%;
-        }
-        .col-10 {
-            width: 83.3333333%;
-        }
-        .col-11 {
-            width: 91.6666666%;
-        }
-        .col-12 {
-            width: 100%;
-        }
-/*                                   768                            */
+
         @media screen and (min-width: 768px) {
-            .col-ma-1 {
-                width: 8.333333%;
-            }
-            .col-ma-2 {
-                width: 16.666666%;
-            }
-            .col-ma-3 {
-                width: 25%;
-            }
-            .col-ma-4 {
-                width: 33.3333333%;
-
-            }
-            .col-ma-5 {
-                width: 41.6666666%;
-
-            }
-            .col-ma-6 {
-                width: 50%;
-            }
-            .col-ma-7 {
-                width: 58.33333333%;
-            }
-            .col-ma-8 {
-                width: 66.666666666%;
-            }
-            .col-ma-9 {
-                width: 75%;
-            }
-            .col-ma-10 {
-                width: 83.3333333%;
-            }
-            .col-ma-11 {
-                width: 91.6666666%;
-            }
-            .col-ma-12 {
-                width: 100%;
-            }
-        }
-
-/*                              1024px                              */
-
-        @media screen and (min-width: 1024px) {
-            .col-lg-1 {
-                width: 8.333333%;
-            }
-            .col-lg-2 {
-                width: 16.666666%;
-            }
-            .col-lg-3 {
-                width: 25%;
-            }
-            .col-lg-4 {
-                width: 33.3333333%;
-            }
-            .col-lg-5 {
-                width: 41.6666666%;
-            }
-            .col-lg-6 {
-                width: 50%;
-            }
-            .col-lg-7 {
-                width: 58.33333333%;
-            }
-            .col-lg-8 {
-                width: 66.666666666%;
-            }
-            .col-lg-9 {
-                width: 75%;
-            }
-            .col-lg-10 {
-                width: 83.3333333%;
-            }
-            .col-lg-11 {
-                width: 91.6666666%;
-            }
-            .col-lg-12 {
-                width: 100%;
+            .nav .btn-sub-control {
+                display: none;
             }
 
-        }
+            .nav>ul {
+                display: flex;
+            }
 
-/*                          1200px                    */
-        @media screen and (min-width: 1200px) {
-            .col-xl-1 {
-                width: 8.333333%;}
-            .col-xl-2 {
-                width: 16.666666%;
-            }
-            .col-xl-3 {
-                width: 25%;
-            }
-            .col-xl-4 {
-                width: 33.3333333%;
 
-            }
-            .col-xl-5 {
-                width: 41.6666666%;
 
+            .nav a:hover {
+
+                background-color: yellow;
+                font-size: 20PX;
+                color: red;
+                transition: 0.5S;
             }
-            .col-xl-6 {
-                width: 50%;
+
+
+            .nav>ul ul {
+                display: none;
+                position: absolute;
             }
-            .col-xl-7 {
-                width: 58.33333333%;
-            }
-            .col-xl-8 {
-                width: 66.666666666%;
-            }
-            .col-xl-9 {
-                width: 75%;
-            }
-            .col-xl-10 {
-                width: 83.3333333%;
-            }
-            .col-xl-11 {
-                width: 91.6666666%;
-            }
-            .col-xl-12 {
-                width: 100%;
+
+            .nav li:hover ul {
+                display: block;
             }
         }
     </style>
 </head>
 
 <body>
+    <div class="nav">
+        <ul>
+            <li><a href="#">link</a></li>
+            <li>
+                <a href="#">link</a>
+                <div class="btn-sub-control">▶</div>
+                <ul>
+                    <li><a href="#">sub link</a></li>
+                    <li><a href="#">sub link</a></li>
+                    <li><a href="#">sub link</a></li>
+                    <li><a href="#">sub link</a></li>
+                    <li><a href="#">sub link</a></li>
+                </ul>
+            </li>
+            <li><a href="#">link</a></li>
+            <li>
+                <a href="#">link</a>
+                <ul>
+                    <li><a href="#">sub link</a></li>
+                    <li><a href="#">sub link</a></li>
+                    <li><a href="#">sub link</a></li>
+                    <li><a href="#">sub link</a></li>
+                    <li><a href="#">sub link</a></li>
+                </ul>
+            </li>
+            <li><a href="#">link</a></li>
 
-    <div class="containre">
-        <div class="col-1 col-ma-2 col-lg-6 col-xl-12">
-            <div class="item"></div>
-        </div>
-
-
+        </ul>
     </div>
-
-
-
-
-
-
-
-
-
-
-
 
 
 
