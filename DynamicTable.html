@@ -53,9 +53,9 @@
 
 
 
-            let tr = document.createElement("tr");
-            let col01 = document.createElement("th");
-            col01.innerText = "項目"
+            let tr = document.createElement("tr");/*一列*/
+            let col01 = document.createElement("th");/*一列的第一格*/
+            col01.innerText = "項目"                    /*文字*/
             let col02 = document.createElement("th");
             col02.innerText = "水庫名稱 name"
             let col03 = document.createElement("th");
@@ -71,32 +71,17 @@
             tr.appendChild(col05);
             thead.appendChild(tr);
 
-
-
-            // Reservoir.forEach((Reservoir, index) => {
-            //     keys = Object.keys(Reservoir);
-            //     tr = document.createElement("tr");
-            //     keys.forEach((key, index) => {
-            //         col01 = document.createElement("td");
-            //         col01.innerText = Reservoir[key];
-            //         tr.appendChild(col01);
-            //     });
-            //     tbody.appendChild(tr);
-            // })
-
-
             Reservoir.forEach((Reservoir, index) => {
-                let key = Object.keys(Reservoir);
-                let tr = document.createElement("tr");
-                
-           
-                key.forEach((key, index) => {
+                keys = Object.keys(Reservoir);
+                tr = document.createElement("tr");
+                keys.forEach((key, index) => {
                     col01 = document.createElement("td");
                     col01.innerText = Reservoir[key];
                     tr.appendChild(col01);
-                    thead.appendChild(tr);
-                })
+                });
+                tbody.appendChild(tr);
             })
+
 
 
 
