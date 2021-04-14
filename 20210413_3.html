@@ -82,10 +82,12 @@
         <!-- 右邊 -->
 
         <div id="iphone">
+            <h1 id="iphone_$"></h1>
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-6" id="pic_A">
-                        <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-pro-gold-hero?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1604021659000"
+                        <img id="pic_img_A"
+                            src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-pro-graphite-hero?wid=470&hei=556&fmt=png-alpha&.v=1604021660000"
                             class="w-100">
                     </div>
                     <div class="col-12 col-md-6" id="text">
@@ -98,14 +100,15 @@
                             <span><b>選擇機型。</b></span>
                             <a href="#">哪一款機型最適合你？</a>
                         </div>
-                        <div id="iphone_12_6.1"
-                            class="d-flex justify-content-between align-items-center img_w p-2 mb-1">
+                        <button id="iphone_12_6.1"
+                            class="d-flex justify-content-between align-items-center img_w p-2 mb-1 w-100 ">
                             <div class="d-flex flex-column">
                                 <span>iPhone 12 Pro</span> <span>6.1 吋顯示器¹</span>
                             </div>
                             <span class="d-flex align-items-center">NT$33,900起</span>
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center img_w p-2 mt-1">
+                        </button>
+                        <div id="iphone_12_6.7"
+                            class="d-flex justify-content-between align-items-center img_w p-2 mt-1">
                             <div class="d-flex flex-column">
                                 <span>iPhone 12 Pro Max</span>
                                 <span>6.7 吋顯示器¹</span>
@@ -118,13 +121,13 @@
                         <div class="row d-flex flex-column w-100 m-0">
                             <div class="col-12 col-md-6 w-100 p-0">
                                 <div class="d-flex justify-content-between ">
-                                    <div
+                                    <div id="iphone_12_color_Graphite"
                                         class="img_w d-flex flex-column align-items-center justify-content-center w-50 m-1">
                                         <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-finish-graphite-2020?wid=204&hei=204&fmt=jpeg&qlt=80&.v=1601054548000"
                                             class="w-25">
                                         <span>石墨色</span>
                                     </div>
-                                    <div
+                                    <div id="iphone_12_color_Silver"
                                         class="img_w d-flex flex-column align-items-center justify-content-center w-50 m-1">
                                         <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-finish-silver-2020?wid=204&hei=204&fmt=jpeg&qlt=80&.v=1601054548000"
                                             class="w-25">
@@ -134,13 +137,13 @@
                             </div>
                             <div class="col-12 col-md-6 w-100 p-0">
                                 <div class="d-flex justify-content-between">
-                                    <div
+                                    <div id="iphone_12_color_Golden"
                                         class="img_w d-flex flex-column align-items-center justify-content-center w-50 m-1">
                                         <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-finish-gold-2020?wid=204&hei=204&fmt=jpeg&qlt=80&.v=1601054548000"
                                             class="w-25">
                                         <span>金色</span>
                                     </div>
-                                    <div
+                                    <div id="iphone_12_color_Pacific-Blue"
                                         class="img_w d-flex flex-column align-items-center justify-content-center w-50 m-1">
                                         <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-finish-blue-2020?wid=204&hei=204&fmt=jpeg&qlt=80&.v=1601054547000"
                                             class="w-25">
@@ -437,36 +440,121 @@
 
 
     <script>
-        //圖片
+        //iphone按鈕
         let btn1 = document.getElementById('button_A')
         btn1.addEventListener('click', function () {
             document.getElementById("iphone").style.display = "block";
             document.getElementById("ipad").style.display = "none";
             document.getElementById("mac").style.display = "none";
+            // iPhone 12 Pro Pro 6.1 吋顯示器¹
+            let iphone_12_6_1 = document.getElementById('iphone_12_6.1')
+            //金額
+            iphone_12_6_1.onclick = function () {
+                iphone_12_6_1.setAttribute('costom', '{"Name" : "iPhone 12 Pro","Price":33900}');
+                console.log(iphone_12_6_1.getAttributeNode('costom').value);
+                let product = JSON.parse(iphone_12_6_1.getAttributeNode('costom').value);
+                console.log(product);
+                iphone_$.innerText = `名稱:${product.Name}\n價格:${product.Price}`;
+                //預設圖片
+                let pic_A = document.getElementById('pic_img_A')
+                pic_A.setAttribute('src', 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-pro-graphite-hero?wid=470&hei=556&fmt=png-alpha&.v=1604021660000')
+                pic_A.setAttribute('class', 'w-100')
+                // color選擇
+                // 石墨色
+                let iphone_12_6_1_color_Graphite = document.getElementById('iphone_12_color_Graphite')
+                iphone_12_6_1_color_Graphite.onclick = function () {
+                    pic_A.setAttribute('src', 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-pro-graphite-hero?wid=470&hei=556&fmt=png-alpha&.v=1604021660000')
+                    pic_A.setAttribute('class', 'w-100')
+                }
+                //銀色
+                let iphone_12_6_1_color_Silver = document.getElementById('iphone_12_color_Silver')
+                iphone_12_6_1_color_Silver.onclick = function () {
+                    pic_A.setAttribute('src', 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-pro-silver-hero?wid=470&hei=556&fmt=png-alpha&.v=1604021661000')
+                    pic_A.setAttribute('class', 'w-100')
+                }
+                //金色
+                let iphone_12_6_1_color_Golden = document.getElementById('iphone_12_color_Golden')
+                iphone_12_6_1_color_Golden.onclick = function () {
+                    pic_A.setAttribute('src', 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-pro-gold-hero?wid=470&hei=556&fmt=png-alpha&.v=1604021659000')
+                    pic_A.setAttribute('class', 'w-100')
+                }
+                //太平洋藍色
+                let iphone_12_6_1_color_Pacific_Blue = document.getElementById('iphone_12_color_Pacific-Blue')
+                iphone_12_6_1_color_Pacific_Blue.onclick = function () {
+                    pic_A.setAttribute('src', 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-pro-blue-hero?wid=470&hei=556&fmt=png-alpha&.v=1604021661000')
+                    pic_A.setAttribute('class', 'w-100')
+                }
+
+
+
+
+            }
+// **********************************************************************************************************************
+            // iPhone 12 Pro Max 6.7 吋顯示器¹
+            let iphone_12_6_7 = document.getElementById('iphone_12_6.7')
+            //金額
+            iphone_12_6_7.onclick = function () {
+                iphone_12_6_7.setAttribute('costom', '{"Name" : "iPhone 12 Pro Max","Price":37900}');
+                console.log(iphone_12_6_7.getAttributeNode('costom').value);
+                let product = JSON.parse(iphone_12_6_7.getAttributeNode('costom').value);
+                console.log(product);
+                iphone_$.innerText = `名稱:${product.Name}\n價格:${product.Price}`;
+                //預設圖片
+                let pic_A = document.getElementById('pic_img_A')
+                pic_A.setAttribute('src', 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-pro-max-graphite-hero?wid=470&hei=556&fmt=png-alpha&.v=1604021658000')
+                pic_A.setAttribute('class', 'w-100')
+                // color選擇
+                // 石墨色
+                let iphone_12_6_7_color_Graphite = document.getElementById('iphone_12_color_Graphite')
+                iphone_12_6_7_color_Graphite.onclick = function () {
+                    pic_A.setAttribute('src', 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-pro-max-graphite-hero?wid=470&hei=556&fmt=png-alpha&.v=1604021658000')
+                    pic_A.setAttribute('class', 'w-100')
+                }
+                //銀色
+                let iphone_12_6_7_color_Silver = document.getElementById('iphone_12_color_Silver')
+                iphone_12_6_7_color_Silver.onclick = function () {
+                    pic_A.setAttribute('src', 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-pro-max-silver-hero?wid=470&hei=556&fmt=png-alpha&.v=1604021658000')
+                    pic_A.setAttribute('class', 'w-100')
+                }
+                //金色
+                let iphone_12_6_7_color_Golden = document.getElementById('iphone_12_color_Golden')
+                iphone_12_6_7_color_Golden.onclick = function () {
+                    pic_A.setAttribute('src', 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-pro-max-gold-hero?wid=470&hei=556&fmt=png-alpha&.v=1604021660000')
+                    pic_A.setAttribute('class', 'w-100')
+                }
+                //太平洋藍色
+                let iphone_12_6_7_color_Pacific_Blue = document.getElementById('iphone_12_color_Pacific-Blue')
+                iphone_12_6_7_color_Pacific_Blue.onclick = function () {
+                    pic_A.setAttribute('src', 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-pro-max-blue-hero?wid=470&hei=556&fmt=png-alpha&.v=1604021658000')
+                    pic_A.setAttribute('class', 'w-100')
+                }
+
+
+
+
+            }
+
+
 
         })
 
 
 
-
+        //ipad按鈕
         let btn2 = document.getElementById('button_B')
         btn2.addEventListener('click', function () {
             document.getElementById("iphone").style.display = "none";
             document.getElementById("ipad").style.display = "block";
             document.getElementById("mac").style.display = "none";
-
-
-
         })
-
+        //mac按鈕
         let btn3 = document.getElementById('button_C')
         btn3.addEventListener('click', function () {
             document.getElementById("iphone").style.display = "none";
             document.getElementById("ipad").style.display = "none";
             document.getElementById("mac").style.display = "block";
-
         })
-        //文字
+
 
 
 
