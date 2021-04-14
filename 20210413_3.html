@@ -56,37 +56,50 @@
         ._line {
             border-bottom: 1px solid #d6d6d6;
         }
+
+        #iphone {
+            display: none;
+        }
+
+        #ipad {
+            display: none;
+        }
+
+        #mac {
+            display: none;
+        }
     </style>
 </head>
 
 <body>
     <div>
         <!-- 左邊 -->
-        <div class="button">
+        <div class="button m-5">
             <button id="button_A" type="submit" class="btn btn-primary">Iphone</button>
             <button id="button_B" type="submit" class="btn btn-primary">Ipad</button>
             <button id="button_C" type="submit" class="btn btn-primary">MacPro</button>
         </div>
         <!-- 右邊 -->
-        <!-- <div id="iphone">
+
+        <div id="iphone">
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-6" id="pic_A">
-                        <img id="img" src="" alt="">
+                        <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-pro-gold-hero?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1604021659000"
+                            class="w-100">
                     </div>
                     <div class="col-12 col-md-6" id="text">
                         <div class="d-flex flex-column">
                             <h1 aria-label="iPhone 12 Pro" class="fwl">
                                 <div class="new-all">全新</div>
                                 <strong>購買 iPhone 12 Pro</strong>
-                            </h1> -->
-        <!-- <p>全新</p>
-                        <h3>購買 iPhone 12 Pro</h3> -->
-        <!-- 尺寸大小 -->
-        <!-- <span><b>選擇機型。</b></span>
+                            </h1>
+                            <!-- 尺寸大小 -->
+                            <span><b>選擇機型。</b></span>
                             <a href="#">哪一款機型最適合你？</a>
                         </div>
-                        <div id="iphone_12_6.1" class="d-flex justify-content-between align-items-center img_w p-2 mb-1">
+                        <div id="iphone_12_6.1"
+                            class="d-flex justify-content-between align-items-center img_w p-2 mb-1">
                             <div class="d-flex flex-column">
                                 <span>iPhone 12 Pro</span> <span>6.1 吋顯示器¹</span>
                             </div>
@@ -98,9 +111,9 @@
                                 <span>6.7 吋顯示器¹</span>
                             </div>
                             <span class="d-flex align-items-center">NT$37,900起</span>
-                        </div> -->
-        <!-- 顏色外觀 -->
-        <!-- <div class="_line w-100 my-5"></div>
+                        </div>
+                        <!-- 顏色外觀 -->
+                        <div class="_line w-100 my-5"></div>
                         <span><b>選擇外觀。</b></span>
                         <div class="row d-flex flex-column w-100 m-0">
                             <div class="col-12 col-md-6 w-100 p-0">
@@ -135,9 +148,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div> -->
-        <!-- 容量-->
-        <!-- <div class="d-flex flex-column">
+                        </div>
+                        <!-- 容量-->
+                        <div class="d-flex flex-column">
                             <span><b>選擇儲存容量。</b></span>
                             <a href="#">你需要多少儲存容量？</a>
                         </div>
@@ -155,9 +168,9 @@
                                         <span>NT$37,400</span>
                                     </div>
                                 </div>
-                            </div> -->
+                            </div>
 
-        <!-- <div class="col-12 col-md-6 w-100 p-0">
+                            <div class="col-12 col-md-6 w-100 p-0">
                                 <div class="d-flex justify-content-between">
                                     <div
                                         class="img_w d-flex flex-column align-items-center justify-content-center w-50 m-1">
@@ -170,16 +183,147 @@
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
+
+        <!-- **************************************ipad************************************** -->
+
+        <div id="ipad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6" id="pic_A">
+                        <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-silver-202003_GEO_TW?wid=470&hei=556&fmt=png-alpha&.v=1583550058848"
+                            class="w-100">
+                    </div>
+                    <div class="col-12 col-md-6" id="text">
+                        <div class="d-flex flex-column">
+                            <h1 aria-label="" class="fwl">
+                                <strong>購買 iPad Pro</strong>
+                            </h1>
+                            <p>購買 iPad 可享免額外付費運送服務。</p>
+                            <!-- 尺寸大小 -->
+                            <span><b>機型</b></span>
+
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center img_w p-2 mb-1">
+                            <div class="d-flex flex-column">
+                                <span>11 吋顯示器</span>
+                            </div>
+                            <span class="d-flex align-items-center">NT$43,400 起</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center img_w p-2 mt-1">
+                            <div class="d-flex flex-column">
+                                <span>12.9 吋顯示器</span>
+                            </div>
+                            <span class="d-flex align-items-center">NT$50,400 起</span>
+                        </div>
+                        <!-- 顏色外觀 -->
+                        <div class="_line w-100 my-5"></div>
+                        <span><b>選擇外觀。</b></span>
+                        <div class="row d-flex flex-column w-100 m-0">
+                            <div class="col-12 col-md-6 w-100 p-0">
+                                <div class="d-flex justify-content-between ">
+                                    <div
+                                        class="img_w d-flex flex-column align-items-center justify-content-center w-50 m-1">
+                                        <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-space-gray-201508?wid=32&amp;hei=32&amp;fmt=png-alpha&amp;.v=0"
+                                            class="w-25">
+                                        <span>石墨色</span>
+                                    </div>
+                                    <div
+                                        class="img_w d-flex flex-column align-items-center justify-content-center w-50 m-1">
+                                        <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-silver-201508?wid=32&amp;hei=32&amp;fmt=png-alpha&amp;.v=0"
+                                            class="w-25">
+                                        <span>銀色</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="_line w-100 my-5"></div>
+
+                        <!-- 容量-->
+                        <div class="d-flex flex-column">
+                            <span><b>選擇儲存容量。</b></span>
+                        </div>
+                        <div class="row d-flex flex-column w-100 m-0">
+                            <div class="col-12 col-md-6 w-100 p-0">
+                                <div class="d-flex justify-content-between">
+                                    <div
+                                        class="img_w d-flex flex-column align-items-center justify-content-center w-50 m-1">
+                                        <div><span>128</span><span>GB<sup>1</sup></span></div>
+                                        <span>NT$32,900 起</span>
+                                    </div>
+                                    <div
+                                        class="img_w d-flex flex-column align-items-center justify-content-center w-50 m-1">
+                                        <div><span>256</span><span>GB<sup>1</sup></span></div>
+                                        <span>NT$36,400 起</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 w-100 p-0">
+                                <div class="d-flex justify-content-between">
+                                    <div
+                                        class="img_w d-flex flex-column align-items-center justify-content-center w-50 m-1">
+                                        <div><span>512</span><span>GB<sup>1</sup></span></div>
+                                        <span>NT$43,400 起</span>
+                                    </div>
+                                    <div
+                                        class="img_w d-flex flex-column align-items-center justify-content-center w-50 m-1">
+                                        <div><span>1</span><span>TB<sup>1</sup></span></div>
+                                        <span>NT$50,400 起</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">你需要多少儲存空間？</a>
+                        <div class="_line w-100 my-5"></div>
+
+                        <span><b>連線能力</b></span>
+
+                        <div class="row d-flex flex-column w-100 m-0">
+                            <div class="col-12 col-md-6 w-100 p-0">
+                                <div class="d-flex justify-content-between">
+                                    <div
+                                        class="img_w d-flex flex-column align-items-center justify-content-center w-50 m-1">
+                                        <div><span>Wi-Fi</span></div>
+                                        <span>NT$32,900</span>
+                                    </div>
+                                    <div
+                                        class="img_w d-flex flex-column align-items-center justify-content-center w-50 m-1">
+                                        <div><span>Wi-Fi + 行動網路</span></div>
+                                        <span>NT$37,900</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">你需要 Wi-Fi 或 Wi-Fi + 行動網路機型？</a>
+                        <span><b>讓你的裝置更具個人風格。</b></span>
+                        <div class="d-flex justify-content-between align-items-center img_w p-2 mb-1">
+                            <div class="d-flex flex-column">
+                                <span>加上鐫刻</span> <span>鐫刻你的名字、縮寫、電話號碼或日期。Apple 獨家提供。</span>
+                            </div>
+                            <span class="d-flex align-items-center">免費</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center img_w p-2 mb-1">
+                            <div class="d-flex flex-column">
+                                <span>不加鐫刻</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
+        <!-- **************************************mac************************************** -->
 
-
-        <div id="mic">
+        <div id="mac">
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-6" id="pic_B">
-                        <img id="img" src="" alt="">
+                        <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/macbook-air-space-gray-config-201810?wid=539&hei=312&fmt=jpeg&qlt=95&.v=1603332211000"
+                            class="w-100">
                     </div>
                     <div class="col-12 col-md-6" id="text">
                         <div class="d-flex flex-column">
@@ -188,16 +332,16 @@
                                 <strong>自訂你的 MacBook Air - 太空灰色</strong>
                             </h1>
                             <div class="d-flex flex-column my-2">
-                                
-                                    <span>Apple M1 晶片配備 8 核心 CPU、8 核心 GPU 與 16 核心神經網路引擎</span>
-                                    <span>8GB 統一記憶體</span>
-                                    <span>512GB SSD 儲存裝置</span>
-                                    <span>備原彩顯示技術的 Retina 顯示器具</span>
-                                    <span>背光巧控鍵盤 - 中文 (注音)</span>
-                                    <span>Touch ID</span>
-                                    <span>力度觸控板</span>
-                                    <span>兩個 Thunderbolt / USB 4 埠</span>
-                                
+
+                                <span>Apple M1 晶片配備 8 核心 CPU、8 核心 GPU 與 16 核心神經網路引擎</span>
+                                <span>8GB 統一記憶體</span>
+                                <span>512GB SSD 儲存裝置</span>
+                                <span>備原彩顯示技術的 Retina 顯示器具</span>
+                                <span>背光巧控鍵盤 - 中文 (注音)</span>
+                                <span>Touch ID</span>
+                                <span>力度觸控板</span>
+                                <span>兩個 Thunderbolt / USB 4 埠</span>
+
                             </div>
                             <a href="#">進一步了解 Apple M1 晶片 ></a>
                             <div class="_line w-100 my-5"></div>
@@ -207,7 +351,7 @@
                             <div class="d-flex flex-column">
                                 <span>8GB 統一記憶體</span>
                             </div>
-                          
+
                         </div>
                         <div class="d-flex justify-content-between align-items-center img_w p-2 mb-1">
                             <div class="d-flex flex-column">
@@ -224,7 +368,7 @@
                             <div class="d-flex flex-column">
                                 <span>512GB SSD 儲存裝置</span>
                             </div>
-    
+
                         </div>
                         <div class="d-flex justify-content-between align-items-center img_w p-2 mb-1">
                             <div class="d-flex flex-column">
@@ -288,6 +432,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 
 
@@ -295,35 +440,30 @@
         //圖片
         let btn1 = document.getElementById('button_A')
         btn1.addEventListener('click', function () {
-            let pic_A = document.getElementById('img')
-            img.setAttribute('src', 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-pro-gold-hero?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1604021659000')
-            img.setAttribute('class', 'w-100')
-
-            // let pic_At = document.getElementById('iphone')
-
+            document.getElementById("iphone").style.display = "block";
+            document.getElementById("ipad").style.display = "none";
+            document.getElementById("mac").style.display = "none";
 
         })
-
-
-
-
 
 
 
 
         let btn2 = document.getElementById('button_B')
         btn2.addEventListener('click', function () {
-            let pic_B = document.getElementById('img')
-            img.setAttribute('src', 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-silver-202003_GEO_TW?wid=470&hei=556&fmt=png-alpha&.v=1583541567675')
-            img.setAttribute('class', 'w-100')
+            document.getElementById("iphone").style.display = "none";
+            document.getElementById("ipad").style.display = "block";
+            document.getElementById("mac").style.display = "none";
+
+
 
         })
 
         let btn3 = document.getElementById('button_C')
         btn3.addEventListener('click', function () {
-            let pic_C = document.getElementById('img')
-            img.setAttribute('src', 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/macbook-air-gallery3-20201110?wid=2000&hei=1536&fmt=jpeg&qlt=95&.v=1603399121000')
-            img.setAttribute('class', 'w-100')
+            document.getElementById("iphone").style.display = "none";
+            document.getElementById("ipad").style.display = "none";
+            document.getElementById("mac").style.display = "block";
 
         })
         //文字
@@ -343,6 +483,10 @@
 
 
     </script>
+
+
+
+
 
     <!-- Optional JavaScript; choose one of the two! -->
 
