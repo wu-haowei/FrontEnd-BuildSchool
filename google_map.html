@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Map</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <style type="text/css">
+        /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+        #map {
+            height: 100%;
+        }
+
+        /* Optional: Makes the sample page fill the window. */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <script>
+        let map;
+
+        let employees_1 = [];
+        let employees_2 = [];
+
+
+
+        for (let i = 0; i < 2; i++) {
+
+            var x = (i + 1);
+            var y = (i + 1);
+
+            
+        }
+
+const myLatLng = { x, y };
+
+
+        function initMap() {
+
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: myLatLng,
+                zoom: 15,
+            });
+            new google.maps.Marker({
+                position: myLatLng,
+                map,
+                title: "Hello World!",
+            });
+            requestJSON1();
+            requestJSON2();
+        }
+
+
+
+
+        const url_1 = 'https://raw.githubusercontent.com/taihochan/JsonData/main/%E5%8F%B0%E7%81%A3%E8%A1%8C%E6%94%BF%E5%9C%B0%E5%8D%80.json';
+        let xhr_1 = new XMLHttpRequest();
+
+        function requestJSON1() {
+            xhr_1.onload = function () {
+                employees_1 = JSON.parse(this.responseText)
+            }
+        }
+        xhr_1.open("GET", url_1);
+        xhr_1.send();
+        ///-------------------------------------------------------------------------------
+        const url_2 = 'https://raw.githubusercontent.com/taihochan/JsonData/main/%E5%8F%B0%E7%81%A3%E8%87%AA%E4%BE%86%E6%B0%B4%E7%94%A8%E9%87%8F.json';
+        let xhr_2 = new XMLHttpRequest();
+
+        function requestJSON2() {
+            xhr_2.onload = function () {
+                employees_2 = JSON.parse(this.responseText)
+            }
+        }
+        xhr_2.open("GET", url_2);
+        xhr_2.send();
+        ///-------------------------------------------------------------------------------
+        // let employees_1 = [];
+        // let employees_2 = [];
+        ///-------------------------------------------------------------------------------
+
+
+
+
+
+
+
+        // employees_2.TaiwanWaterExchangingData.StatisticofWaterResourcesClass.StatisticofWaterUsageClass.TheConsumptionOfWater.forEach((x,y)=>console.table(x))
+
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+    <div id="map"></div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUIzshuil2vxBR475q-mOhkWLqCk1RetI&callback=initMap&libraries=&v=weekly"
+        async></script>
+</body>
+
+</html>
