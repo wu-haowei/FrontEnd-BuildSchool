@@ -34,6 +34,7 @@
             border: 1px solid #d6d6d6;
             border-radius: 10px;
             min-height: 6.23529rem;
+       
         }
 
         a {
@@ -566,23 +567,17 @@
         let ipad_mode_Picture = [
             { mode: '11 吋顯示器', $: '25,900起' },
             { mode: '12.9 吋顯示器', $: '32,900起' },
-
         ];
-
         let ipad_color_Picture = [
             { color: '太空灰色', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-space-gray-201508?wid=32&amp;hei=32&amp;fmt=png-alpha&amp;.v=0' },
             { color: '銀色', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-silver-201508?wid=32&amp;hei=32&amp;fmt=png-alpha&amp;.v=0' }
         ];
-
         let ipad_SSD_Picture = [
             { SSD: 128, SSD_GB: 'GB', SSD_1: '1', $: 'NT$25,900 起' },
             { SSD: 256, SSD_GB: 'GB', SSD_1: '1', $: 'NT$29,400 起' },
             { SSD: 512, SSD_GB: 'GB', SSD_1: '1', $: 'NT$36,400 起' },
             { SSD: 1, SSD_GB: 'TB', SSD_1: '1', $: 'NT$43,400 起' },
-
-
         ];
-
         let ipad_Connect_Picture = [
             { Connect: 'WiFi', $: 'NT$25,900 起' },
             { Connect: 'WiFi+行動網路', $: '30,900 起' }
@@ -662,30 +657,25 @@
             ];
         //------------------------------尺寸----------
         let ipad_mode = document.querySelector("#ipad_mode");
-        ipad_mode.classList.add("btn","w-100")
-
+        ipad_mode.classList.add("btn", "w-100")
         for (let i = 0; i < ipad_mode_Picture.length; i++) {
             let out = document.createElement("div");
             out.classList.add("d-flex", "justify-content-between", "align-items-center", "img_w", "p-2", "mb-1");
             let inside = document.createElement("div");
             inside.classList.add("d-flex", "flex-column", "test")
-
             let inside_span = document.createElement("span");
             inside_span.innerText = ipad_mode_Picture[i].mode;
             inside.appendChild(inside_span);
-
             let span = document.createElement("span");
             span.innerText = ipad_mode_Picture[i].$;
             span.classList.add("d-flex", "align-items-center");
-
             out.appendChild(inside);
             out.appendChild(span);
             ipad_mode.appendChild(out);
         }
         //------------------------------顏色----------
-
         let ipad_color = document.getElementById('ipad_color');
-        ipad_color.classList.add("d-flex" ,"btn")
+        ipad_color.classList.add("d-flex", "btn")
         for (let i = 0; i < ipad_color_Picture.length; i++) {
             let out = document.createElement('div');
             out.classList.add("row", "d-flex", "flex-column", "w-100", "m-0")
@@ -708,43 +698,30 @@
             ipad_color.appendChild(out);
         }
         //------------------------------容量----------
-
-
-
         let ipad_SSD = document.getElementById('ipad_SSD');
-        ipad_SSD.classList.add("d-flex","flex-wrap" ,"btn")
+        ipad_SSD.classList.add("d-flex", "flex-wrap", "btn")
         for (let i = 0; i < ipad_SSD_Picture.length; i++) {
             let out = document.createElement('div');
-
-
             out.classList.add("row", "d-flex", "flex-column", "w-50", "m-0")
             let out_C = document.createElement('div');
             out_C.classList.add("col-12", "col-md-6", "w-100", "p-0")
             let out_B = document.createElement('div');
             out_B.classList.add("d-flex", "justify-content-between")
-
-
             let out_A1 = document.createElement('div');
             out_A1.classList.add("img_w", "d-flex", "flex-column", "align-items-center", "justify-content-center", "w-100", "m-1")
             let inside_A1 = document.createElement('div');
-
-
             let inside_span_1_1 = document.createElement('span');
             inside_span_1_1.innerText = ipad_SSD_Picture[i].SSD;
             inside_A1.appendChild(inside_span_1_1);
-
             let inside_span_1_2 = document.createElement('span');
             inside_span_1_2.innerText = ipad_SSD_Picture[i].SSD_GB;
             inside_A1.appendChild(inside_span_1_2);
-
             let inside_sup_1 = document.createElement('sup');
             inside_sup_1.innerText = ipad_SSD_Picture[i].SSD_1;
             inside_span_1_2.appendChild(inside_sup_1);
-
             let inside_span_1_3 = document.createElement("span");
             inside_span_1_3.innerText = ipad_SSD_Picture[i].$;
             out_A1.appendChild(inside_span_1_3);
-
             out_A1.appendChild(inside_A1);
             out_A1.appendChild(inside_A1);
             out_B.appendChild(out_A1);
@@ -754,9 +731,8 @@
         }
 
         //------------------------------款式----------
-
         let ipad_Connect = document.getElementById('ipad_Connect');
-        ipad_Connect.classList.add("d-flex" ,"btn")
+        ipad_Connect.classList.add("d-flex", "btn")
         for (let i = 0; i < ipad_Connect_Picture.length; i++) {
             let out = document.createElement('div');
             out.classList.add("row", "d-flex", "flex-column", "w-100", "m-0")
@@ -778,33 +754,31 @@
             ipad_Connect.appendChild(out);
         }
         //------------------------------其他----------
-       
         let ipad_Other = document.getElementById('ipad_Other');
         for (let i = 0; i < ipad_Other_Picture.length; i++) {
-            ipad_Other.classList.add("btn-group","d-block","btn")
+            ipad_Other.classList.add("btn-group", "d-block", "btn")
             let out = document.createElement('div');
             out.classList.add("d-flex", "justify-content-between", "align-items-center", "img_w", "p-2", "mb-1", "flex-row-reverse")
-
             let inside = document.createElement('div');
             inside.classList.add("d-flex", "flex-column", "align-items-baseline")
-
             let inside_span_A = document.createElement("span");
             inside_span_A.innerText = ipad_Other_Picture[i].Plus;
             inside.appendChild(inside_span_A);
-
             let inside_span_B = document.createElement("span");
             inside_span_B.innerText = ipad_Other_Picture[i].Key;
             inside.appendChild(inside_span_B);
             let inside_span_C = document.createElement("span");
             inside_span_C.innerText = ipad_Other_Picture[i].$;
             out.appendChild(inside_span_C);
-
             out.appendChild(inside);
             ipad_Other.appendChild(out);
 
 
 
         }
+
+
+
 
 
 
@@ -817,28 +791,45 @@
             document.getElementById("ipad").style.display = "block";
             document.getElementById("mac").style.display = "none";
 
+            let ipad_mode = document.getElementById("ipad_mode")
+            // ipad_mode.addEventListener('onclick', function () {
+
+            
+                // ipad_mode.style.borderWidth = "5px";
+                // ipad_mode.style.borderColor = 'blue';
+
+            //     border: 1px solid #d6d6d6;
+            // border-radius: 10px;
+            // min-height: 6.23529rem;
+
+                // for (let i = 0; i < ipad_mode_Picture.length; i++) {
+                //     ipad_$.innerText = ipad_mode_Picture[i].mode;
+                // }
+
+                // // ipad_mode_Picture.forEach((x,index)=>{
+                // // })
 
 
 
-            let ipad_type = document.querySelectorAll('#ipad_type')
-
-            ipad_type.forEach(item => {
-                item.addEventListener('click', function (event) {
-
-                    // ipad[`${event.target.attributes[1].value}`][0].mode.forEach(item => {
-                    //     ipad_$.innerText = `${item.Name}\t${item.$}`
-                    // })
-                    ipad_$.innerText = event.target.attributes[1].value
-
-                    // ipad_$.innerText =event.target.attributes[1].value
-                    console.log(event.target.attributes[1].mode)
-                    // console.log(event.target)
 
 
-                })
-            })
+
+
+            // })
+
+
+
+
 
         })
+
+
+
+
+
+
+
+
 
 
         //mac按鈕
