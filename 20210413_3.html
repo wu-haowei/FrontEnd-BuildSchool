@@ -69,8 +69,23 @@
         #mac {
             display: none;
         }
+
+        .box-shadow {
+            box-shadow: 0 0 10px 1px rgb(52 121 250);
+        }
+
+        .OLD {
+
+            color: #000;
+            background-color: pink;
+            height: 50px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
     </style>
 </head>
+
 
 <body>
     <div>
@@ -81,7 +96,6 @@
             <button id="button_C" type="submit" class="btn btn-primary">MacPro</button>
         </div>
         <!-- 右邊 -->
-
         <div id="iphone">
             <h1 id="iphone_$"></h1>
             <div class="container">
@@ -188,15 +202,14 @@
                 </div>
             </div>
         </div>
-
         <!-- **************************************ipad************************************** -->
-
         <div id="ipad">
-            <h1 id="ipad_$">價錢</h1>
+            <h1 id="ipad_$" class="OLD">價錢</h1>
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-6" id="pic_A">
-                        <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-silver-202003_GEO_TW?wid=470&hei=556&fmt=png-alpha&.v=1583550058848"
+                        <img id="pic_A_img"
+                            src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-silver-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617912663000"
                             class="w-100">
                     </div>
                     <div class="col-12 col-md-6" id="text">
@@ -209,142 +222,33 @@
                             <span><b>機型</b></span>
                         </div>
                         <div id="ipad_mode">
-                            <!-- -----------------------我不會互動--------------         -->
-                            <!-- <div id="ipad_type" value="25,900" class="d-flex justify-content-between align-items-center img_w p-2 mb-1 ">
-                                <div class="d-flex flex-column test">
-                                    <span>11 吋顯示器</span>
-                                </div>
-                                <span class="d-flex align-items-center">NT$43,400 起</span>
-                            </div>
-                            <div id="ipad_type" value="model_12"
-                                class="d-flex justify-content-between align-items-center img_w p-2 mt-1">
-                                <div class="d-flex flex-column">
-                                    <span>12.9 吋顯示器</span>
-                                </div>
-                                <span class="d-flex align-items-center">NT$50,400 起</span>
-                            </div> -->
-                            <!-- -----------------------我不會互動--------------         -->
                         </div>
                         <!-- 顏色外觀 -->
                         <div class="_line w-100 my-5"></div>
                         <span><b>選擇外觀。</b></span>
                         <div id="ipad_color">
-                            <!-- -----------------------我不會互動2--------------         -->
-                            <!-- <div class="row d-flex flex-column w-100 m-0">
-                                <div class="col-12 col-md-6 w-100 p-0">
-                                    <div class="d-flex justify-content-between ">
-                                        <div class="img_w d-flex flex-column align-items-center justify-content-center w-50 m-1"> -->
-                            <!-- <img id="img_color" src="" class="w-25"> -->
-
-
-                            <!-- <span>石墨色</span> -->
-                            <!-- </div> -->
-                            <!-- <div class="img_w d-flex flex-column align-items-center justify-content-center w-50 m-1">  -->
-                            <!-- <img id="img_color" src="" class="w-25"> -->
-
-                            <!-- <span>銀色</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
-                            <!-- <-- -----------------------我不會互動2-------------- -->
                         </div>
                         <div class="_line w-100 my-5"></div>
-
                         <!-- 容量-->
                         <div class="d-flex flex-column">
                             <span><b>選擇儲存容量。</b></span>
                         </div>
-                        <!-- <-- -----------------------我不會互動3-------------- -->
                         <div id="ipad_SSD">
-                            <!-- <div class="row d-flex flex-column w-100 m-0">
-                                <div class="col-12 col-md-6 w-100 p-0">
-                                    <div class="d-flex justify-content-between">
-                                        <div class="img_w d-flex flex-column align-items-center justify-content-center w-50 m-1">
-                                            <div>
-                                                <span>128</span>
-                                                <span>GB
-                                                    <sup>1</sup>
-                                                </span>
-                                            </div>
-                                            <span>NT$32,900 起</span>
-                                        </div>
-                                        <div class="img_w d-flex flex-column align-items-center justify-content-center w-50 m-1">
-                                            <div><span>256</span><span>GB<sup>1</sup></span></div>
-                                            <span>NT$36,400 起</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-md-6 w-100 p-0">
-                                    <div class="d-flex justify-content-between">
-                                        <div
-                                            class="img_w d-flex flex-column align-items-center justify-content-center w-50 m-1">
-                                            <div><span>512</span><span>GB<sup>1</sup></span></div>
-                                            <span>NT$43,400 起</span>
-                                        </div>
-                                        <div
-                                            class="img_w d-flex flex-column align-items-center justify-content-center w-50 m-1">
-                                            <div><span>1</span><span>TB<sup>1</sup></span></div>
-                                            <span>NT$50,400 起</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
                         </div>
-                        <!-- <-- -----------------------我不會互動3-------------- -->
-
                         <a href="#">你需要多少儲存空間？</a>
                         <div class="_line w-100 my-5"></div>
-
                         <span><b>連線能力</b></span>
-                        <!-- <-- -----------------------我不會互動4-------------- -->
                         <div id="ipad_Connect">
-                            <!-- <div class="row d-flex flex-column w-100 m-0">
-                                <div class="col-12 col-md-6 w-100 p-0">
-                                    <div class="d-flex justify-content-between">
-                                        <div
-                                            class="img_w d-flex flex-column align-items-center justify-content-center w-50 m-1">
-                                            <div><span>Wi-Fi</span></div>
-                                            <span>NT$32,900</span>
-                                        </div>
-                                        <div
-                                            class="img_w d-flex flex-column align-items-center justify-content-center w-50 m-1">
-                                            <div><span>Wi-Fi + 行動網路</span></div>
-                                            <span>NT$37,900</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
                         </div>
-                        <!-- <-- -----------------------我不會互動4-------------- -->
-
                         <a href="#">你需要 Wi-Fi 或 Wi-Fi + 行動網路機型？</a>
                         <span><b>讓你的裝置更具個人風格。</b></span>
-                        <!-- <-- -----------------------我不會互動4-------------- -->
                         <div id="ipad_Other">
-                            <!-- <div class="d-flex justify-content-between align-items-center img_w p-2 mb-1">
-                                <div class="d-flex flex-column">
-                                    <span>加上鐫刻</span> <span>鐫刻你的名字、縮寫、電話號碼或日期。Apple 獨家提供。</span>
-                                </div>
-                                <span class="d-flex align-items-center">免費</span>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center img_w p-2 mb-1">
-                                <div class="d-flex flex-column">
-                                    <span>不加鐫刻</span>
-                                </div>
-                            </div> -->
                         </div>
-                        <!-- <-- -----------------------我不會互動4-------------- -->
-
-
                     </div>
                 </div>
             </div>
         </div>
-
-
         <!-- **************************************mac************************************** -->
-
         <div id="mac">
             <div class="container">
                 <div class="row">
@@ -459,9 +363,7 @@
                 </div>
             </div>
         </div>
-
     </div>
-
 
     <script>
         //iphone按鈕
@@ -562,22 +464,7 @@
         })
 
 
-        // let ipad_mode_Picture = [
-        //     { mode: '11 吋顯示器', $: '25,900起' },
-        //     { mode: '12.9 吋顯示器', $: '32,900起' },
-        // ];
-     
-        // let ipad_SSD_Picture = [
-        //     { SSD: 128, SSD_GB: 'GB', SSD_1: '1', $: 'NT$25,900 起' },
-        //     { SSD: 256, SSD_GB: 'GB', SSD_1: '1', $: 'NT$29,400 起' },
-        //     { SSD: 512, SSD_GB: 'GB', SSD_1: '1', $: 'NT$36,400 起' },
-        //     { SSD: 1, SSD_GB: 'TB', SSD_1: '1', $: 'NT$43,400 起' },
-        // ];
-        // // let ipad_Connect_Picture = [
-        //     { Connect: 'WiFi', $: 'NT$25,900 起' },
-        //     { Connect: 'WiFi+行動網路', $: '30,900 起' }
-        // ];
-           let ipad_color_Picture = [
+        let ipad_color_Picture = [
             { color: '太空灰色', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-space-gray-201508?wid=32&amp;hei=32&amp;fmt=png-alpha&amp;.v=0' },
             { color: '銀色', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-silver-201508?wid=32&amp;hei=32&amp;fmt=png-alpha&amp;.v=0' }
         ];
@@ -589,69 +476,69 @@
         let ipad =
             [
                 //---------------------11 吋顯示器-太空灰色-WiFi------------------------------------------------------------------
-                { mode: '11 吋顯示器', color: '太空灰色', SSD: 128, SSD_GB: 'GB', SSD_1: '1', Connect: 'WiFi', $: '25,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-spacegray-202003_GEO_TW?wid=470&hei=556&fmt=png-alpha&.v=1583544704580' },
+                { mode: '11 吋顯示器', color: '太空灰色', SSD: 128, SSD_GB: 'GB', SSD_1: '1', Connect: 'WiFi', $: '25,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-spacegray-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617925790000' },
 
-                { mode: '11 吋顯示器', color: '太空灰色', SSD: 256, SSD_GB: 'GB', SSD_1: '1', Connect: 'WiFi', $: '29,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-spacegray-202003_GEO_TW?wid=470&hei=556&fmt=png-alpha&.v=1583544704580' },
+                { mode: '11 吋顯示器', color: '太空灰色', SSD: 256, SSD_GB: 'GB', SSD_1: '1', Connect: 'WiFi', $: '29,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-spacegray-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617925790000' },
 
-                { mode: '11 吋顯示器', color: '太空灰色', SSD: 512, SSD_GB: 'GB', SSD_1: '1', Connect: 'WiFi', $: '36,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-spacegray-202003_GEO_TW?wid=470&hei=556&fmt=png-alpha&.v=1583544704580' },
+                { mode: '11 吋顯示器', color: '太空灰色', SSD: 512, SSD_GB: 'GB', SSD_1: '1', Connect: 'WiFi', $: '36,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-spacegray-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617925790000' },
 
-                { mode: '11 吋顯示器', color: '太空灰色', SSD: 1, SSD_GB: 'TB', SSD_1: '1', Connect: 'WiFi', $: '43,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-spacegray-202003_GEO_TW?wid=470&hei=556&fmt=png-alpha&.v=1583544704580' },
+                { mode: '11 吋顯示器', color: '太空灰色', SSD: 1, SSD_GB: 'TB', SSD_1: '1', Connect: 'WiFi', $: '43,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-spacegray-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617925790000' },
                 //---------------------11 吋顯示器-太空灰色-行動網路------------------------------------------------------------------
-                { mode: '11 吋顯示器', color: '太空灰色', SSD: 128, SSD_GB: 'GB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '30,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-spacegray-202003_GEO_TW?wid=470&hei=556&fmt=png-alpha&.v=1583544704580' },
+                { mode: '11 吋顯示器', color: '太空灰色', SSD: 128, SSD_GB: 'GB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '30,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-spacegray-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617925790000' },
 
-                { mode: '11 吋顯示器', color: '太空灰色', SSD: 256, SSD_GB: 'GB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '34,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-spacegray-202003_GEO_TW?wid=470&hei=556&fmt=png-alpha&.v=1583544704580' },
+                { mode: '11 吋顯示器', color: '太空灰色', SSD: 256, SSD_GB: 'GB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '34,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-spacegray-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617925790000' },
 
-                { mode: '11 吋顯示器', color: '太空灰色', SSD: 512, SSD_GB: 'GB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '36,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-spacegray-202003_GEO_TW?wid=470&hei=556&fmt=png-alpha&.v=1583544704580' },
+                { mode: '11 吋顯示器', color: '太空灰色', SSD: 512, SSD_GB: 'GB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '36,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-spacegray-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617925790000' },
 
-                { mode: '11 吋顯示器', color: '太空灰色', SSD: 1, SSD_GB: 'TB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '38,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-spacegray-202003_GEO_TW?wid=470&hei=556&fmt=png-alpha&.v=1583544704580' },
+                { mode: '11 吋顯示器', color: '太空灰色', SSD: 1, SSD_GB: 'TB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '38,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-spacegray-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617925790000' },
                 //---------------------11 吋顯示器-銀色-WiFi------------------------------------------------------------------
-                { mode: '11 吋顯示器', color: '銀色', SSD: 128, SSD_GB: 'GB', SSD_1: '1', Connect: 'WiFi', $: '25,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-wifi-silver-202003_GEO_TW?wid=470&hei=556&fmt=png-alpha&.v=1583541593237' },
+                { mode: '11 吋顯示器', color: '銀色', SSD: 128, SSD_GB: 'GB', SSD_1: '1', Connect: 'WiFi', $: '25,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-silver-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617912663000' },
 
-                { mode: '11 吋顯示器', color: '銀色', SSD: 256, SSD_GB: 'GB', SSD_1: '1', Connect: 'WiFi', $: '29,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-wifi-silver-202003_GEO_TW?wid=470&hei=556&fmt=png-alpha&.v=1583541593237' },
+                { mode: '11 吋顯示器', color: '銀色', SSD: 256, SSD_GB: 'GB', SSD_1: '1', Connect: 'WiFi', $: '29,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-silver-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617912663000' },
 
-                { mode: '11 吋顯示器', color: '銀色', SSD: 512, SSD_GB: 'GB', SSD_1: '1', Connect: 'WiFi', $: '36,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-wifi-silver-202003_GEO_TW?wid=470&hei=556&fmt=png-alpha&.v=1583541593237' },
+                { mode: '11 吋顯示器', color: '銀色', SSD: 512, SSD_GB: 'GB', SSD_1: '1', Connect: 'WiFi', $: '36,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-silver-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617912663000' },
 
-                { mode: '11 吋顯示器', color: '銀色', SSD: 1, SSD_GB: 'TB', SSD_1: '1', Connect: 'WiFi', $: '43,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-wifi-silver-202003_GEO_TW?wid=470&hei=556&fmt=png-alpha&.v=1583541593237' },
+                { mode: '11 吋顯示器', color: '銀色', SSD: 1, SSD_GB: 'TB', SSD_1: '1', Connect: 'WiFi', $: '43,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-silver-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617912663000' },
                 // //---------------------11 吋顯示器-銀色-行動網路------------------------------------------------------------------
-                { mode: '11 吋顯示器', color: '銀色', SSD: 128, SSD_GB: 'GB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '30,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-wifi-silver-202003_GEO_TW?wid=470&hei=556&fmt=png-alpha&.v=1583541593237' },
+                { mode: '11 吋顯示器', color: '銀色', SSD: 128, SSD_GB: 'GB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '30,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-silver-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617912663000' },
 
-                { mode: '11 吋顯示器', color: '銀色', SSD: 256, SSD_GB: 'GB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '34,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-wifi-silver-202003_GEO_TW?wid=470&hei=556&fmt=png-alpha&.v=1583541593237' },
+                { mode: '11 吋顯示器', color: '銀色', SSD: 256, SSD_GB: 'GB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '34,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-silver-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617912663000' },
 
-                { mode: '11 吋顯示器', color: '銀色', SSD: 512, SSD_GB: 'GB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '36,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-wifi-silver-202003_GEO_TW?wid=470&hei=556&fmt=png-alpha&.v=1583541593237' },
+                { mode: '11 吋顯示器', color: '銀色', SSD: 512, SSD_GB: 'GB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '36,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-silver-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617912663000' },
 
-                { mode: '11 吋顯示器', color: '銀色', SSD: 1, SSD_GB: 'TB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '38,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-wifi-silver-202003_GEO_TW?wid=470&hei=556&fmt=png-alpha&.v=1583541593237' },
+                { mode: '11 吋顯示器', color: '銀色', SSD: 1, SSD_GB: 'TB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '38,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-11-select-cell-silver-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617912663000' },
                 //---------------------12.9 吋顯示器-太空灰色-WiFi------------------------------------------------------------------
                 //---------------------12.9 吋顯示器-太空灰色-WiFi------------------------------------------------------------------
-                { mode: '12.9 吋顯示器', color: '太空灰色', SSD: 128, SSD_GB: 'GB', SSD_1: '1', Connect: 'WiFi', $: '32,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-spacegray-202003_GEO_TW?wid=470&hei=556&fmt=png-alpha&.v=1583552336687' },
+                { mode: '12.9 吋顯示器', color: '太空灰色', SSD: 128, SSD_GB: 'GB', SSD_1: '1', Connect: 'WiFi', $: '32,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-spacegray-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617920534000' },
 
-                { mode: '12.9 吋顯示器', color: '太空灰色', SSD: 256, SSD_GB: 'GB', SSD_1: '1', Connect: 'WiFi', $: '36,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-spacegray-202003_GEO_TW?wid=470&hei=556&fmt=png-alpha&.v=1583552336687' },
+                { mode: '12.9 吋顯示器', color: '太空灰色', SSD: 256, SSD_GB: 'GB', SSD_1: '1', Connect: 'WiFi', $: '36,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-spacegray-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617920534000' },
 
-                { mode: '12.9 吋顯示器', color: '太空灰色', SSD: 512, SSD_GB: 'GB', SSD_1: '1', Connect: 'WiFi', $: '43,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-spacegray-202003_GEO_TW?wid=470&hei=556&fmt=png-alpha&.v=1583552336687' },
-                { mode: '12.9 吋顯示器', color: '太空灰色', SSD: 1, SSD_GB: 'TB', SSD_1: '1', Connect: 'WiFi', $: '50,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-spacegray-202003_GEO_TW?wid=470&hei=556&fmt=png-alpha&.v=1583552336687' },
+                { mode: '12.9 吋顯示器', color: '太空灰色', SSD: 512, SSD_GB: 'GB', SSD_1: '1', Connect: 'WiFi', $: '43,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-spacegray-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617920534000' },
+                { mode: '12.9 吋顯示器', color: '太空灰色', SSD: 1, SSD_GB: 'TB', SSD_1: '1', Connect: 'WiFi', $: '50,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-spacegray-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617920534000' },
                 // ---------------------12.9 吋顯示器-太空灰色-行動網路------------------------------------------------------------------
-                { mode: '12.9 吋顯示器', color: '太空灰色', SSD: 128, SSD_GB: 'GB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '37,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-spacegray-202003_GEO_TW?wid=470&hei=556&fmt=png-alpha&.v=1583552336687' },
+                { mode: '12.9 吋顯示器', color: '太空灰色', SSD: 128, SSD_GB: 'GB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '37,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-spacegray-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617920534000' },
 
-                { mode: '12.9 吋顯示器', color: '太空灰色', SSD: 256, SSD_GB: 'GB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '41,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-spacegray-202003_GEO_TW?wid=470&hei=556&fmt=png-alpha&.v=1583552336687' },
+                { mode: '12.9 吋顯示器', color: '太空灰色', SSD: 256, SSD_GB: 'GB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '41,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-spacegray-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617920534000' },
 
-                { mode: '12.9 吋顯示器', color: '太空灰色', SSD: 512, SSD_GB: 'GB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '48,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-spacegray-202003_GEO_TW?wid=470&hei=556&fmt=png-alpha&.v=1583552336687' },
+                { mode: '12.9 吋顯示器', color: '太空灰色', SSD: 512, SSD_GB: 'GB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '48,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-spacegray-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617920534000' },
 
-                { mode: '12.9 吋顯示器', color: '太空灰色', SSD: 1, SSD_GB: 'TB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '55,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-spacegray-202003_GEO_TW?wid=470&hei=556&fmt=png-alpha&.v=1583552336687' },
+                { mode: '12.9 吋顯示器', color: '太空灰色', SSD: 1, SSD_GB: 'TB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '55,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-spacegray-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617920534000' },
                 //---------------------12.9 吋顯示器-銀色-WiFi------------------------------------------------------------------
-                { mode: '12.9 吋顯示器', color: '太空灰色', SSD: 128, SSD_GB: 'GB', SSD_1: '1', Connect: 'WiFi', $: '32,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-spacegray-202003_GEO_TW?wid=470&hei=556&fmt=png-alpha&.v=1583552336687' },
+                { mode: '12.9 吋顯示器', color: '銀色', SSD: 128, SSD_GB: 'GB', SSD_1: '1', Connect: 'WiFi', $: '32,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-silver-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617919669000' },
 
-                { mode: '12.9 吋顯示器', color: '太空灰色', SSD: 256, SSD_GB: 'GB', SSD_1: '1', Connect: 'WiFi', $: '36,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-spacegray-202003_GEO_TW?wid=470&hei=556&fmt=png-alpha&.v=1583552336687' },
+                { mode: '12.9 吋顯示器', color: '銀色', SSD: 256, SSD_GB: 'GB', SSD_1: '1', Connect: 'WiFi', $: '36,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-silver-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617919669000' },
 
-                { mode: '12.9 吋顯示器', color: '太空灰色', SSD: 512, SSD_GB: 'GB', SSD_1: '1', Connect: 'WiFi', $: '43,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-spacegray-202003_GEO_TW?wid=470&hei=556&fmt=png-alpha&.v=1583552336687' },
+                { mode: '12.9 吋顯示器', color: '銀色', SSD: 512, SSD_GB: 'GB', SSD_1: '1', Connect: 'WiFi', $: '43,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-silver-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617919669000' },
 
-                { mode: '12.9 吋顯示器', color: '太空灰色', SSD: 1, SSD_GB: 'TB', SSD_1: '1', Connect: 'WiFi', $: '50,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-spacegray-202003_GEO_TW?wid=470&hei=556&fmt=png-alpha&.v=1583552336687' },
+                { mode: '12.9 吋顯示器', color: '銀色', SSD: 1, SSD_GB: 'TB', SSD_1: '1', Connect: 'WiFi', $: '50,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-silver-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617919669000' },
                 // ---------------------12.9 吋顯示器-銀色-行動網路------------------------------------------------------------------
-                { mode: '12.9 吋顯示器', color: '銀色', SSD: 128, SSD_GB: 'GB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '37,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-spacegray-202003_GEO_TW?wid=470&hei=556&fmt=png-alpha&.v=1583552336687' },
+                { mode: '12.9 吋顯示器', color: '銀色', SSD: 128, SSD_GB: 'GB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '37,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-silver-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617919669000' },
 
-                { mode: '12.9 吋顯示器', color: '銀色', SSD: 256, SSD_GB: 'GB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '41,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-spacegray-202003_GEO_TW?wid=470&hei=556&fmt=png-alpha&.v=1583552336687' },
+                { mode: '12.9 吋顯示器', color: '銀色', SSD: 256, SSD_GB: 'GB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '41,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-silver-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617919669000' },
 
-                { mode: '12.9 吋顯示器', color: '銀色', SSD: 512, SSD_GB: 'GB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '48,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-spacegray-202003_GEO_TW?wid=470&hei=556&fmt=png-alpha&.v=1583552336687' },
+                { mode: '12.9 吋顯示器', color: '銀色', SSD: 512, SSD_GB: 'GB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '48,900起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-silver-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617919669000' },
 
-                { mode: '12.9 吋顯示器', color: '銀色', SSD: 1, SSD_GB: 'TB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '55,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-spacegray-202003_GEO_TW?wid=470&hei=556&fmt=png-alpha&.v=1583552336687' },
+                { mode: '12.9 吋顯示器', color: '銀色', SSD: 1, SSD_GB: 'TB', SSD_1: '1', Connect: 'Wi-Fi + 行動網路', $: '55,400起', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-pro-12-select-cell-silver-202104_GEO_TW?wid=470&hei=556&fmt=p-jpg&qlt=95&.v=1617919669000' },
             ];
         //------------------------------尺寸----------
         let ipad_mode = document.querySelector("#ipad_mode");
@@ -660,9 +547,21 @@
         let set = new Set();
         let result_mode = ipad.filter(item => !set.has(item.mode) ? set.add(item.mode) : false);
 
+        let set1 = new Set();
+        let result_mode_color = ipad.filter(item => !set.has(item.mode + item.color) ? set.add(item.mode + item.color) : false);
+        let mode_Asn = [];
+
+
         for (let i = 0; i < result_mode.length; i++) {
             let out = document.createElement("div");
-            out.classList.add("d-flex", "justify-content-between", "align-items-center", "img_w", "p-2", "mb-1");
+            out.classList.add("d-flex", "justify-content-between", "align-items-center", "img_w", "p-2", "mb-1", `ipad_mode_${i + 1}`);
+            out.addEventListener('click', () => {
+                // console.log(ipad_color_Picture[0].color_imgsrc);
+                // console.log(ipad[0].color_imgsrc)
+
+                mode_Asn = ipad.filter(x => x.mode == result_mode[i].mode)
+                console.log(mode_Asn)
+            })
             let inside = document.createElement("div");
             inside.classList.add("d-flex", "flex-column", "test")
             let inside_span = document.createElement("span");
@@ -675,10 +574,22 @@
             out.appendChild(span);
             ipad_mode.appendChild(out);
         }
+        result_mode.forEach((item, index) => {
+            let ipad_mode_index = document.querySelector(`.ipad_mode_${[index + 1]}`)
+            ipad_mode_index.addEventListener('click', function () {
 
+                let pic_A_img = document.getElementById('pic_A_img');
+                pic_A_img.src = result_mode[index].color_imgsrc;
+                ipad_$.innerHTML = result_mode[index].$;
+                // ipad_mode_1.style.border = '1px blue solid';
+                // ipad_mode_[index].style.border = '1px #d6d6d6 solid';
+                console.log(item)
+            })
+        })
         //------------------------------顏色----------
         let ipad_color = document.getElementById('ipad_color');
         ipad_color.classList.add("d-flex", "btn")
+        let color_Asn = [];
         for (let i = 0; i < ipad_color_Picture.length; i++) {
             let out = document.createElement('div');
             out.classList.add("row", "d-flex", "flex-column", "w-100", "m-0")
@@ -687,10 +598,17 @@
             let out_B = document.createElement('div');
             out_B.classList.add("d-flex", "justify-content-between")
             let out_A = document.createElement('div');
-            out_A.classList.add("img_w", "d-flex", "flex-column", "align-items-center", "justify-content-center", "w-100", "m-1")
+            out_A.classList.add("img_w", "d-flex", "flex-column", "align-items-center", "justify-content-center", "w-100", "m-1", `ipad_color_${i + 1}`);
+            out_A.addEventListener('click', () => {
+                color_Asn = mode_Asn.filter(x => x.color == ipad_color_Picture[i].color)
+                let pic_A_img = document.getElementById('pic_A_img');
+                pic_A_img.src = color_Asn[0].color_imgsrc;
+                console.log(color_Asn)
+                console.log(color_Asn[0])
+            })
             let inside_img = document.createElement("img");
             inside_img.setAttribute('src', ipad_color_Picture[i].color_imgsrc);
-            inside_img.classList.add("w-25");
+            inside_img.classList.add("w-20");
             out_A.appendChild(inside_img);
             let inside_span = document.createElement("span");
             inside_span.innerText = ipad_color_Picture[i].color;
@@ -700,12 +618,32 @@
             out.appendChild(out_C);
             ipad_color.appendChild(out);
         }
+
+
+        // let ipad_color_1 = document.querySelector('.ipad_color_1')
+        // ipad_color_1.addEventListener('click', function () {
+        //     let pic_A_img = document.getElementById('pic_A_img');
+        //     ipad_$.innerHTML = 'ipad_color_太空灰';
+        //     ipad_color_1.style.border = '1px blue solid';   
+        //     ipad_color_2.style.border = '1px #d6d6d6 solid';
+        // })
+
+        // let ipad_color_2 = document.querySelector('.ipad_color_2')
+        // ipad_color_2.addEventListener('click', function () {
+        //     let pic_A_img = document.getElementById('pic_A_img');
+        //     ipad_$.innerHTML = 'ipad_color_銀色';
+        //     ipad_color_2.style.border = '1px blue solid';
+        //     ipad_color_1.style.border = '1px #d6d6d6 solid';
+        // })
+
+
         //------------------------------容量----------
         let ipad_SSD = document.getElementById('ipad_SSD');
         ipad_SSD.classList.add("d-flex", "flex-wrap", "btn")
-
+        let SSD_Asn = [];
         let set_SSD = new Set();
         let result_SSD = ipad.filter(item => !set.has(item.SSD) ? set.add(item.SSD) : false);
+
         for (let i = 0; i < result_SSD.length; i++) {
             let out = document.createElement('div');
             out.classList.add("row", "d-flex", "flex-column", "w-50", "m-0")
@@ -714,7 +652,14 @@
             let out_B = document.createElement('div');
             out_B.classList.add("d-flex", "justify-content-between")
             let out_A1 = document.createElement('div');
-            out_A1.classList.add("img_w", "d-flex", "flex-column-reverse", "align-items-center", "justify-content-center", "w-100", "m-1")
+            out_A1.classList.add("img_w", "d-flex", "flex-column-reverse", "align-items-center", "justify-content-center", "w-100", "m-1", `result_SSD_${i + 1}`)
+
+            out_A1.addEventListener('click', () => {
+                SSD_Asn = color_Asn.filter(x => x.SSD == result_SSD[i].SSD)
+                ipad_$.innerHTML = SSD_Asn[0].$
+                console.log(SSD_Asn)
+            })
+
             let inside_A1 = document.createElement('div');
             let inside_span_1_1 = document.createElement('span');
             inside_span_1_1.innerText = result_SSD[i].SSD;
@@ -736,6 +681,18 @@
             ipad_SSD.appendChild(out);
         }
 
+        // result_SSD.forEach((item, index) => {
+        //     let result_SSD_index = document.querySelector(`.result_SSD_${[index + 1]}`)
+        //     result_SSD_index.addEventListener('click', function () {
+        //         ipad_$.innerHTML = result_SSD[index].SSD + result_SSD[index].SSD_GB;
+        //         //     result_SSD_1.style.border = '1px blue solid';
+        //         // result_SSD_2.style.border = '1px #d6d6d6 solid';
+        //         // result_SSD_3.style.border = '1px #d6d6d6 solid';
+        //         // result_SSD_4.style.border = '1px #d6d6d6 solid';
+        //         console.log(result_SSD)
+        //     })
+        // })
+
         //------------------------------款式----------
         let ipad_Connect = document.getElementById('ipad_Connect');
         ipad_Connect.classList.add("d-flex", "btn")
@@ -750,7 +707,13 @@
             let out_B = document.createElement('div');
             out_B.classList.add("d-flex", "justify-content-between")
             let out_A = document.createElement('div');
-            out_A.classList.add("img_w", "d-flex", "flex-column", "align-items-center", "justify-content-center", "w-100", "m-1")
+            out_A.classList.add("img_w", "d-flex", "flex-column", "align-items-center", "justify-content-center", "w-100", "m-1", `result_Connect_${i + 1}`)
+
+            out_A.addEventListener('click', () => {
+                Connect_Asn = SSD_Asn.filter(x => x.Connect == result_Connect[i].Connect)
+                ipad_$.innerHTML = Connect_Asn[0].$
+                console.log(Connect_Asn)
+            })
             let inside_span = document.createElement("span");
             inside_span.innerText = result_Connect[i].Connect;
             out_A.appendChild(inside_span);
@@ -763,12 +726,29 @@
             out.appendChild(out_C);
             ipad_Connect.appendChild(out);
         }
+
+        // result_Connect.forEach((item, index) => {
+        //     let result_Connect_index = document.querySelector(`.result_Connect_${[index + 1]}`)
+        //     result_Connect_index.addEventListener('click', function () {
+        //         ipad_$.innerHTML = result_Connect[index].Connect;
+        //         //     result_Connect_1.style.border = '1px blue solid';
+        //         //     result_Connect_2.style.border = '1px #d6d6d6 solid';
+        //         //     result_Connect_1.classList.add("box-shadow");
+        //         //     result_Connect_2.classList.remove("box-shadow");
+        //         console.log(result_Connect)
+        //     })
+        // })
+
         //------------------------------其他----------
+
+
+        let set_Other = new Set();
+        let result_Other = ipad_Other_Picture.filter(item => !set.has(item.Plus) ? set.add(item.Plus) : false);
         let ipad_Other = document.getElementById('ipad_Other');
         for (let i = 0; i < ipad_Other_Picture.length; i++) {
             ipad_Other.classList.add("btn-group", "d-block", "btn")
             let out = document.createElement('div');
-            out.classList.add("d-flex", "justify-content-between", "align-items-center", "img_w", "p-2", "mb-1", "flex-row-reverse")
+            out.classList.add("d-flex", "justify-content-between", "align-items-center", "img_w", "p-2", "mb-1", "flex-row-reverse", `ipad_Other_${i + 1}`)
             let inside = document.createElement('div');
             inside.classList.add("d-flex", "flex-column", "align-items-baseline")
             let inside_span_A = document.createElement("span");
@@ -782,17 +762,21 @@
             out.appendChild(inside_span_C);
             out.appendChild(inside);
             ipad_Other.appendChild(out);
-
-
-
         }
 
+        result_Other.forEach((item, index) => {
+            let result_Other_index = document.querySelector(`.ipad_Other_${[index + 1]}`)
+            result_Other_index.addEventListener('click', function () {
+                ipad_$.innerHTML = result_Other[index].Plus;
+                //     ipad_Other_1.style.border = '1px blue solid';
+                //     ipad_Other_2.style.border = '1px #d6d6d6 solid';
+                //     ipad_Other_1.classList.add("box-shadow");
+                //     ipad_Other_2.classList.remove("box-shadow");
+                console.log(result_Other)
+            })
+        })
 
-
-
-
-
-
+        //**********************************************************************************
 
         //ipad按鈕
         let btn2 = document.getElementById('button_B')
@@ -801,45 +785,7 @@
             document.getElementById("ipad").style.display = "block";
             document.getElementById("mac").style.display = "none";
 
-            // let ipad_mode = document.getElementById("ipad_mode")
-            // ipad_mode.addEventListener('click', function () {
-
-
-            //     ipad_mode.style.borderWidth = "5px";
-            //     ipad_mode.style.borderColor = 'blue';
-
-            //     border: 1px solid #d6d6d6;
-            // border-radius: 10px;
-            // min-height: 6.23529rem;
-
-            // for (let i = 0; i < ipad_mode_Picture.length; i++) {
-            //     ipad_$.innerText = ipad_mode_Picture[i].mode;
-            // }
-
-            // ipad_mode_Picture.forEach((x,index)=>{
-            // })
-
-
-
-
-
-
-
-            // })
-
-
-
-
-
         })
-
-
-
-
-
-
-
-
 
 
         //mac按鈕
@@ -849,118 +795,6 @@
             document.getElementById("ipad").style.display = "none";
             document.getElementById("mac").style.display = "block";
         })
-
-
-
-        // var Product = {
-        //     Iphone: {
-        //         iPhone12: {
-        //             productName: 'iPhone12',
-        //             baseImgUrl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-mini-select-2020?wid=940&amp;hei=1112&amp;fmt=jpeg&amp;qlt=80&amp;.v=1604343708000',
-        //             OutWard: [
-        //                 { color: '白色', colorValue: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-white-202010?wid=204&amp;hei=204&amp;fmt=jpeg&amp;qlt=80&amp;.v=1601072989000', imagerurl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-mini-white-select-2020?wid=940&amp;hei=1112&amp;fmt=png-alpha&amp;qlt=80&amp;.v=1604343707000' },
-        //                 { color: '黑色', colorValue: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-black-202010?wid=102&amp;hei=102&amp;fmt=jpeg&amp;qlt=95&amp;.v=1601072988000', imagerurl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-mini-black-select-2020?wid=940&amp;hei=1112&amp;fmt=png-alpha&amp;qlt=80&amp;.v=1604343705000' },
-        //                 { color: '藍色', colorValue: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-blue-202010?wid=102&amp;hei=102&amp;fmt=jpeg&amp;qlt=95&amp;.v=1601072988000', imagerurl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-mini-blue-select-2020?wid=940&amp;hei=1112&amp;fmt=png-alpha&amp;qlt=80&amp;.v=1604343706000' },
-        //                 { color: '綠色', colorValue: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-green-202010?wid=102&amp;hei=102&amp;fmt=jpeg&amp;qlt=95&amp;.v=1601072990000', imagerurl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-mini-green-select-2020?wid=940&amp;hei=1112&amp;fmt=png-alpha&amp;qlt=80&amp;.v=1604343706000' },
-        //                 { color: '紅色', colorValue: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-red-202010?wid=102&amp;hei=102&amp;fmt=jpeg&amp;qlt=95&amp;.v=1601072989000', imagerurl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-mini-red-select-2020?wid=940&amp;hei=1112&amp;fmt=png-alpha&amp;qlt=80&amp;.v=1604343707000' },
-        //             ],
-        //             spec: [
-        //                 { size: '64GB', fit: 'NT$23,900' },
-        //                 { size: '128GB', fit: 'NT$25,500' },
-        //                 { size: '256GB', fit: 'NT$29,000' },
-        //             ]
-        //         },
-        //         iPhone12pro: {
-        //             productName: 'iPhone12pro',
-        //             baseImgUrl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-blue-select-2020?wid=940&amp;hei=1112&amp;fmt=png-alpha&amp;qlt=80&amp;.v=1604343704000',
-        //             OutWard: [
-        //                 { color: '白色', colorValue: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-white-202010?wid=102&amp;hei=102&amp;fmt=jpeg&amp;qlt=95&amp;.v=1601072989000', imagerurl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-white-select-2020?wid=940&amp;hei=1112&amp;fmt=png-alpha&amp;qlt=80&amp;.v=1604343705000' },
-        //                 { color: '黑色', colorValue: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-black-202010?wid=102&amp;hei=102&amp;fmt=jpeg&amp;qlt=95&amp;.v=1601072988000', imagerurl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-black-select-2020?wid=940&amp;hei=1112&amp;fmt=png-alpha&amp;qlt=80&amp;.v=1604343702000' },
-        //                 { color: '藍色', colorValue: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-blue-202010?wid=102&amp;hei=102&amp;fmt=jpeg&amp;qlt=95&amp;.v=1601072988000', imagerurl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-blue-select-2020?wid=940&amp;hei=1112&amp;fmt=png-alpha&amp;qlt=80&amp;.v=1604343704000' },
-        //                 { color: '綠色', colorValue: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-green-202010?wid=102&amp;hei=102&amp;fmt=jpeg&amp;qlt=95&amp;.v=1601072990000', imagerurl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-green-select-2020?wid=940&amp;hei=1112&amp;fmt=png-alpha&amp;qlt=80&amp;.v=1604343704000' },
-        //                 { color: '紅色', colorValue: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-red-202010?wid=102&amp;hei=102&amp;fmt=jpeg&amp;qlt=95&amp;.v=1601072989000', imagerurl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-12-red-select-2020?wid=940&amp;hei=1112&amp;fmt=png-alpha&amp;qlt=80&amp;.v=1604343703000' },
-        //             ],
-        //             spec: [
-        //                 { size: '64GB', fit: 'NT$26,900' },
-        //                 { size: '128GB', fit: 'NT$28,500' },
-        //                 { size: '256GB', fit: 'NT$32,000' },
-        //             ]
-        //         },
-        //     },
-        //     IPad: {
-        //         iPadAir: {
-        //             productName: 'iPadAir',
-        //             baseImgUrl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-air-select-202009?wid=886&amp;hei=1070&amp;fmt=jpeg&amp;qlt=80&amp;.v=1599066777000',
-        //             OutWard: [
-        //                 { color: '太空灰色', colorValue: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-spacegray-201903?wid=204&amp;amp;hei=204&amp;amp;fmt=png-alpha&amp;amp;qlt=80&amp;amp;.v=1552422652805', imagerurl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-air-select-wifi-spacegray-202009?wid=940&amp;hei=1112&amp;fmt=png-alpha&amp;qlt=80&amp;.v=1598650646000' },
-        //                 { color: '銀色', colorValue: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-silver-201903?wid=204&amp;amp;hei=204&amp;amp;fmt=png-alpha&amp;amp;qlt=80&amp;amp;.v=1552422655664', imagerurl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-air-select-wifi-silver-202009?wid=940&amp;hei=1112&amp;fmt=png-alpha&amp;qlt=80&amp;.v=1598650645000' },
-        //                 { color: '玫瑰金色', colorValue: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-gold-202009?wid=204&amp;amp;hei=204&amp;amp;fmt=jpeg&amp;amp;qlt=80&amp;amp;.v=1599240136000', imagerurl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-air-select-wifi-gold-202009?wid=940&amp;hei=1112&amp;fmt=png-alpha&amp;qlt=80&amp;.v=1598650644000' },
-        //                 { color: '綠色', colorValue: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-green-202009?wid=204&amp;amp;hei=204&amp;amp;fmt=jpeg&amp;amp;qlt=80&amp;amp;.v=1599240136000', imagerurl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-air-select-wifi-green-202009?wid=940&amp;hei=1112&amp;fmt=png-alpha&amp;qlt=80&amp;.v=1598650644000' },
-        //                 { color: '天藍色', colorValue: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-blue-202009?wid=204&amp;amp;hei=204&amp;amp;fmt=png-alpha&amp;amp;qlt=80&amp;amp;.v=1599240136000', imagerurl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-air-select-wifi-blue-202009?wid=940&amp;hei=1112&amp;fmt=png-alpha&amp;qlt=80&amp;.v=1598650644000' }
-        //             ],
-        //             spec: [
-        //                 { size: '64GB', connect: 'Wifi', fit: 'NT$18,900' },
-        //                 { size: '64GB', connect: 'wifi+network', fit: 'NT$23,200' },
-        //                 { size: '256GB', connect: 'wifi', fit: 'NT$23,900' },
-        //                 { size: '256GB', connect: 'wifi+network', fit: 'NT$28,200' }
-        //             ],
-        //         },
-        //     },
-        //     Mac: {
-        //         MacBookAir: {
-        //             productName: 'MacBookAir',
-        //             baseImgUrl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/macbook-air-space-gray-select-201810?wid=452&amp;hei=420&amp;fmt=jpeg&amp;qlt=95&amp;.v=1603332211000',
-        //             OutWard: [
-        //                 { color: '太空灰色', colorValue: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/macbook-air-space-gray-select-201810_SW_COLOR?wid=32&amp;hei=32&amp;fmt=jpeg&amp;qlt=95&amp;.v=1539303180315', imagerurl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/macbook-air-space-gray-select-201810?wid=452&amp;hei=420&amp;fmt=jpeg&amp;qlt=95&amp;.v=1603332211000' },
-        //                 { color: '金色', colorValue: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/macbook-air-gold-select-201810_SW_COLOR?wid=32&amp;hei=32&amp;fmt=jpeg&amp;qlt=95&amp;.v=1539370797855', imagerurl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/macbook-air-gold-select-201810?wid=452&amp;hei=420&amp;fmt=jpeg&amp;qlt=95&amp;.v=1603332211000' },
-        //                 { color: '銀色', colorValue: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/macbook-air-silver-select-201810_SW_COLOR?wid=32&amp;hei=32&amp;fmt=jpeg&amp;qlt=95&amp;.v=1539303180473', imagerurl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/macbook-air-silver-select-201810?wid=452&amp;hei=420&amp;fmt=jpeg&amp;qlt=95&amp;.v=1603332212000' }
-        //             ],
-        //             spec: [
-        //                 { size: '8G', SSD: '256G', fit: 'NT$30,900' },
-        //                 { size: '8G', SSD: '512G', fit: 'NT$36,900' },
-        //                 { size: '8G', SSD: '1TB', fit: 'NT$42,900' },
-        //                 { size: '8G', SSD: '2TB', fit: 'NT$54,900' },
-        //                 { size: '16G', SSD: '256G', fit: 'NT$36,900' },
-        //                 { size: '16G', SSD: '512G', fit: 'NT$42,900' },
-        //                 { size: '16G', SSD: '1TB', fit: 'NT$48,900' },
-        //                 { size: '16G', SSD: '2TB', fit: 'NT$60,900' }
-        //             ]
-        //         },
-        //         MacBookPro: {
-        //             productName: 'MacBookPro',
-        //             baseImgUrl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/macbook-air-space-gray-select-201810?wid=452&amp;hei=420&amp;fmt=jpeg&amp;qlt=95&amp;.v=1603332211000',
-        //             OutWard: [
-        //                 {
-        //                     color: '太空灰色', colorValue: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mbp13touch-space-select-202005_SW_COLOR?wid=64&amp;hei=64&amp;fmt=jpeg&amp;qlt=80&amp;.v=1587086857506 ',
-        //                     imagerurl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mbp-spacegray-select-202011_GEO_TW?wid=1280&amp;hei=1190&amp;fmt=jpeg&amp;qlt=80&amp;.v=1613672892000'
-        //                 },
-        //                 {
-        //                     color: '銀色', colorValue: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mbp-silver-select-202011_SW_COLOR?wid=64&amp;hei=64&amp;fmt=jpeg&amp;qlt=80&amp;.v=1603902883000',
-        //                     imagerurl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mbp-silver-select-202011_GEO_TW?wid=1280&amp;hei=1190&amp;fmt=jpeg&amp;qlt=80&amp;.v=1613673937000'
-        //                 }
-        //             ],
-        //             spec: [
-        //                 { size: '8G', SSD: '256G', fit: 'NT$39,900' },
-        //                 { size: '8G', SSD: '512G', fit: 'NT$45,900' },
-        //                 { size: '8G', SSD: '1TB', fit: 'NT$51,900' },
-        //                 { size: '8G', SSD: '2TB', fit: 'NT$63,900' },
-        //                 { size: '16G', SSD: '256G', fit: 'NT$45,900' },
-        //                 { size: '16G', SSD: '512G', fit: 'NT$51,900' },
-        //                 { size: '16G', SSD: '1TB', fit: 'NT$57,900' },
-        //                 { size: '16G', SSD: '2TB', fit: 'NT$69,900' }
-        //             ]
-        //         },
-        //     }
-        // };
-
-
-
-
-
-
-
-
-
 
 
 
