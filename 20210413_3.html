@@ -178,6 +178,7 @@
         </div>
         <!-- **************************************mac************************************** -->
         <div id="mac">
+            <h1 id="mac_$" class="OLD">價錢</h1>
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-6" id="pic_B">
@@ -191,7 +192,6 @@
                                 <strong>自訂你的 MacBook Air - 太空灰色</strong>
                             </h1>
                             <div class="d-flex flex-column my-2">
-
                                 <span>Apple M1 晶片配備 8 核心 CPU、8 核心 GPU 與 16 核心神經網路引擎</span>
                                 <span>8GB 統一記憶體</span>
                                 <span>512GB SSD 儲存裝置</span>
@@ -200,13 +200,15 @@
                                 <span>Touch ID</span>
                                 <span>力度觸控板</span>
                                 <span>兩個 Thunderbolt / USB 4 埠</span>
-
                             </div>
                             <a href="#">進一步了解 Apple M1 晶片 ></a>
                             <div class="_line w-100 my-5"></div>
 
                         </div>
-                        <div class="d-flex justify-content-between align-items-center img_w p-2 mb-1">
+
+                        <div id="mac_mode">
+                        </div>
+                        <!-- <div class="d-flex justify-content-between align-items-center img_w p-2 mb-1">
                             <div class="d-flex flex-column">
                                 <span>8GB 統一記憶體</span>
                             </div>
@@ -217,13 +219,14 @@
                                 <span>16GB 統一記憶體</span>
                             </div>
                             <span class="d-flex align-items-center">+ NT$6,000</span>
-                        </div>
-                        <!-- 顏色外觀 -->
+                        </div> -->
 
                         <span><b>儲存裝置</b></span><br>
                         <a href="#">你需要多少儲存空間？</a>
 
-                        <div class="d-flex justify-content-between align-items-center img_w p-2 mb-1">
+                        <div id="mac_SSD">
+                        </div>
+                        <!-- <div class="d-flex justify-content-between align-items-center img_w p-2 mb-1">
                             <div class="d-flex flex-column">
                                 <span>512GB SSD 儲存裝置</span>
                             </div>
@@ -240,7 +243,7 @@
                                 <span>2TB SSD 儲存裝置</span>
                             </div>
                             <span class="d-flex align-items-center">+ NT$18,000</span>
-                        </div>
+                        </div> -->
 
                         <span><b>鍵盤語言</b></span><br>
                         <a href="#">進一步了解(鍵盤語言)</a>
@@ -258,8 +261,9 @@
                         <span><b>預先安裝的軟體</b></span><br>
                         <span><b>Final Cut Pro</b></span>
                         <a href="#">進一步了解</a>
-
-                        <div class="col-12 col-md-6 w-100 p-0">
+                        <div id="mac_inal_Cut_Pro">
+                        </div>
+                        <!-- <div class="col-12 col-md-6 w-100 p-0">
                             <div class="d-flex justify-content-between ">
                                 <div
                                     class="img_w d-flex flex-column align-items-center justify-content-center w-50 m-1">
@@ -271,7 +275,7 @@
                                         + NT$9,990</span>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <span><b>Logic Pro</b></span><br>
                         <a href="#">進一步了解</a>
                         <div class="col-12 col-md-6 w-100 p-0">
@@ -339,12 +343,10 @@
         // **********************************************************************************************************************
         let iphone_mode = document.querySelector("#iphone_mode");
         iphone_mode.classList.add("btn", "w-100")
-
         let set_iphone_mode = new Set();
         let result_iPhone_mode = iPhone.filter(item => !set_iphone_mode.has(item.mode) ? set_iphone_mode.add(item.mode) : false);
         // console.log(result_iPhone_mode)
         let iPhone_mode_Asn = [];
-
 
         for (let i = 0; i < result_iPhone_mode.length; i++) {
             let out = document.createElement("div");
@@ -404,9 +406,7 @@
             iphone_color.appendChild(out);
         }
 
-
         //------------------------------SSD----------
-
 
         let iphone_SSD = document.getElementById('iphone_SSD');
         iphone_SSD.classList.add("d-flex", "flex-wrap", "btn")
@@ -426,9 +426,7 @@
 
             out_A1.addEventListener('click', () => {
                 iPhone_SSD_Asn = iPhone_color_Asn.filter(x => x.SSD == result_iPhone_SSD[i].SSD)
-                iphone_$.innerHTML =  "NT$" + (iPhone_SSD_Asn[0].$).substring(0, (iPhone_SSD_Asn[0].$).length - 1)
-
-
+                iphone_$.innerHTML = "NT$" + (iPhone_SSD_Asn[0].$).substring(0, (iPhone_SSD_Asn[0].$).length - 1)
                 console.log(iPhone_SSD_Asn)
             })
 
@@ -452,9 +450,6 @@
             out.appendChild(out_C);
             iphone_SSD.appendChild(out);
         }
-
-
-
         // **********************************************************************************************************************
 
         let ipad_color_Picture = [
@@ -785,7 +780,167 @@
         })
 
         //**********************************************************************************
+        let mac =
+            [
+                //---------------------8GB 統一記憶體------------------------------------------------------------------
+                { mode: '8GB 統一記憶體 ', SSD: '512GB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: '無', Logic_Pro: '無', $: '38,900起' },
+                { mode: '8GB 統一記憶體 ', SSD: '1TB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: '無', Logic_Pro: '無', $: '44,900起' },
+                { mode: '8GB 統一記憶體 ', SSD: '2TB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: '無', Logic_Pro: '無', $: '56,900起' },
+                { mode: '8GB 統一記憶體 ', SSD: '512GB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: 'Final Cut Pro', Logic_Pro: '無', $: '48,890起' },
+                { mode: '8GB 統一記憶體 ', SSD: '1TB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: 'Final Cut Pro', Logic_Pro: '無', $: '54,890起' },
+                { mode: '8GB 統一記憶體 ', SSD: '2TB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: 'Final Cut Pro', Logic_Pro: '無', $: '66,890起' },
+                { mode: '8GB 統一記憶體 ', SSD: '512GB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: '無', Logic_Pro: 'Logic Pro', $: '45,490起' },
+                { mode: '8GB 統一記憶體 ', SSD: '1TB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: '無', Logic_Pro: 'Logic Pro', $: '51,490起' },
+                { mode: '8GB 統一記憶體 ', SSD: '2TB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: '無', Logic_Pro: 'Logic Pro', $: '63,490起' },
+                { mode: '8GB 統一記憶體 ', SSD: '512GB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: 'Final Cut Pro', Logic_Pro: 'Logic Pro', $: '55,480起' },
+                { mode: '8GB 統一記憶體 ', SSD: '1TB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: 'Final Cut Pro', Logic_Pro: 'Logic Pro', $: '61,480起' },
+                { mode: '8GB 統一記憶體 ', SSD: '2TB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: 'Final Cut Pro', Logic_Pro: 'Logic Pro', $: '73,480起' },
+                //---------------------16GB 統一記憶體------------------------------------------------------------------
+                { mode: ' 16GB 統一記憶體', SSD: '512GB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: '無', Logic_Pro: '無', $: '44,900起' },
+                { mode: ' 16GB 統一記憶體', SSD: '1TB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: '無', Logic_Pro: '無', $: '50,900起' },
+                { mode: ' 16GB 統一記憶體', SSD: '2TB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: '無', Logic_Pro: '無', $: '62,900起' },
+                { mode: ' 16GB 統一記憶體', SSD: '512GB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: 'Final Cut Pro', Logic_Pro: '無', $: '54,890起' },
+                { mode: ' 16GB 統一記憶體', SSD: '1TB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: 'Final Cut Pro', Logic_Pro: '無', $: '60,890起' },
+                { mode: ' 16GB 統一記憶體', SSD: '2TB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: 'Final Cut Pro', Logic_Pro: '無', $: '72,890起' },
+                { mode: ' 16GB 統一記憶體', SSD: '512GB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: '無', Logic_Pro: 'Logic Pro', $: '51,490起' },
+                { mode: ' 16GB 統一記憶體', SSD: '1TB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: '無', Logic_Pro: 'Logic Pro', $: '57,490起' },
+                { mode: ' 16GB 統一記憶體', SSD: '2TB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: '無', Logic_Pro: 'Logic Pro', $: '69,490起' },
+                { mode: ' 16GB 統一記憶體', SSD: '512GB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: 'Final Cut Pro', Logic_Pro: 'Logic Pro', $: '61,480起' },
+                { mode: ' 16GB 統一記憶體', SSD: '1TB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: 'Final Cut Pro', Logic_Pro: 'Logic Pro', $: '67,480起' },
+                { mode: ' 16GB 統一記憶體', SSD: '2TB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: 'Final Cut Pro', Logic_Pro: 'Logic Pro', $: '79,480起' },
+            ]
+        //------------------------------尺寸----------
 
+
+        let mac_mode = document.querySelector("#mac_mode");
+        mac_mode.classList.add("btn", "w-100")
+        let set_mac_mode = new Set();
+        let result_mac_mode = mac.filter(item => !set_mac_mode.has(item.mode) ? set_mac_mode.add(item.mode) : false);
+        // console.log(result_mac_mode)
+        let mac_mode_Asn = [];
+        // console.log(mac_mode_Asn)
+        for (let i = 0; i < result_mac_mode.length; i++) {
+            let out = document.createElement("div");
+            out.classList.add("d-flex", "justify-content-between", "align-items-center", "img_w", "p-2", "mb-1", `result_mac_mode_${i + 1}`);
+            out.addEventListener('click', () => {
+                mac_mode_Asn = mac.filter(x => x.mode == result_mac_mode[i].mode)
+                mac_$.innerHTML = result_mac_mode[i].$;
+                console.log(mac_mode_Asn)
+            })
+            let inside = document.createElement("div");
+            inside.classList.add("d-flex", "flex-column", "test")
+            let inside_span = document.createElement("span");
+            inside_span.innerText = result_mac_mode[i].mode;
+            inside.appendChild(inside_span);
+            let span = document.createElement("span");
+            span.innerText = result_mac_mode[i].$;
+            span.classList.add("d-flex", "align-items-center");
+            out.appendChild(inside);
+            out.appendChild(span);
+            mac_mode.appendChild(out);
+        }
+
+        //------------------------------SSD 儲存裝置----------
+
+        let mac_SSD = document.querySelector("#mac_SSD");
+        mac_SSD.classList.add("btn", "w-100")
+        let set_mac_SSD = new Set();
+        let result_mac_SSD = mac.filter(item => !set_mac_SSD.has(item.SSD) ? set_mac_SSD.add(item.SSD) : false);
+        // console.log(result_mac_SSD)
+        let mac_SSD_Asn = [];
+
+        for (let i = 0; i < result_mac_SSD.length; i++) {
+            let out = document.createElement("div");
+            out.classList.add("d-flex", "justify-content-between", "align-items-center", "img_w", "p-2", "mb-1", `result_mac_SSD_${i + 1}`);
+            out.addEventListener('click', () => {
+                mac_SSD_Asn = mac_mode_Asn.filter(x => x.SSD == result_mac_SSD[i].SSD)
+                mac_$.innerHTML = result_mac_SSD[i].$;
+                console.log(mac_SSD_Asn)
+            })
+            let inside = document.createElement("div");
+            inside.classList.add("d-flex", "flex-column", "test")
+            let inside_span = document.createElement("span");
+            inside_span.innerText = result_mac_SSD[i].SSD;
+            inside.appendChild(inside_span);
+            let span = document.createElement("span");
+            span.innerText = result_mac_SSD[i].$;
+            span.classList.add("d-flex", "align-items-center");
+            out.appendChild(inside);
+            out.appendChild(span);
+            mac_SSD.appendChild(out);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //------------------------------Final Cut Pro----------
+        //mac_inal_Cut_Pro
+
+        let mac_inal_Cut_Pro = document.getElementById('mac_inal_Cut_Pro');
+        mac_inal_Cut_Pro.classList.add("d-flex", "flex-wrap", "btn")
+        let mac_inal_Cut_Pro_Asn = [];
+        let set_mac_inal_Cut_Pro = new Set();
+        let result_mac_inal_Cut_Pro = mac.filter(item => !set_mac_inal_Cut_Pro.has(item.Final_Cut_Pro) ? set_mac_inal_Cut_Pro.add(item.Final_Cut_Pro) : false);
+        console.log(result_mac_inal_Cut_Pro)
+
+
+
+        for (let i = 0; i < result_mac_inal_Cut_Pro.length; i++) {
+            let out = document.createElement('div');
+            out.classList.add("row", "d-flex", "flex-column", "w-50", "m-0")
+            let out_C = document.createElement('div');
+            out_C.classList.add("col-12", "col-md-6", "w-100", "p-0")
+            let out_B = document.createElement('div');
+            out_B.classList.add("d-flex", "justify-content-between")
+            let out_A1 = document.createElement('div');
+            out_A1.classList.add("img_w", "d-flex", "flex-column-reverse", "align-items-center", "justify-content-center", "w-100", "m-1", `result_SSD_${i + 1}`)
+            out_A1.addEventListener('click', () => {
+                mac_inal_Cut_Pro_Asn = mac_SSD_Asn.filter(x => x.Final_Cut_Pro == result_mac_inal_Cut_Pro[i].Final_Cut_Pro)
+                mac_$.innerHTML = result_mac_inal_Cut_Pro[i].$;
+                console.log(mac_inal_Cut_Pro_Asn)
+            })
+            let inside_A1 = document.createElement('div');
+            let inside_span_1_1 = document.createElement('span');
+            inside_span_1_1.innerText = result_mac_inal_Cut_Pro[i].Final_Cut_Pro;
+            inside_A1.appendChild(inside_span_1_1);
+            let inside_span_1_2 = document.createElement('span');
+            inside_span_1_2.innerText = '';
+            inside_A1.appendChild(inside_span_1_2);
+            let inside_sup_1 = document.createElement('sup');
+            inside_sup_1.innerText = '';
+            inside_span_1_2.appendChild(inside_sup_1);
+            let inside_span_1_3 = document.createElement("span");
+            inside_span_1_3.innerText = result_mac_inal_Cut_Pro[i].$;
+            out_A1.appendChild(inside_span_1_3);
+            out_A1.appendChild(inside_A1);
+            out_A1.appendChild(inside_A1);
+            out_B.appendChild(out_A1);
+            out_C.appendChild(out_B);
+            out.appendChild(out_C);
+            mac_inal_Cut_Pro.appendChild(out);
+        }
+        //------------------------------Logic Pro----------
+
+
+
+
+
+
+
+
+
+
+
+        //**********************************************************************************
 
         //ipad按鈕
         let btn1 = document.getElementById('button_A')
