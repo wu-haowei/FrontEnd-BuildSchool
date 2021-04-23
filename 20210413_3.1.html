@@ -192,13 +192,14 @@
             // console.warn(btn2)
             btns_2.forEach((item, index) => {
                 item.addEventListener('click', function (e) {
-                    let money = document.querySelector(".money");
-                    money.innerHTML = "價格:" + size[index].money;
+                    // let money = document.querySelector(".money");
+                    // money.innerHTML = "價格:" + size[index].money;
                     btns_2.forEach(Object => Object.setAttribute('style', ''))
                     let _btn = e.path[0].closest('button')
                     _btn.setAttribute('style', 'border:3px solid blue')
                     console.log(e)
                 })
+                
             })
             var btns_0 = document.querySelectorAll('.btn0');
             btns_0.forEach((item, index) => {
