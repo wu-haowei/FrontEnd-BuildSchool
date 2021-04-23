@@ -71,7 +71,7 @@
         }
 
         .box-shadow {
-            border:3px solid blue;
+     
             box-shadow: 0 0 10px 1px rgb(52 121 250);
         }
 
@@ -294,9 +294,9 @@
                     item.addEventListener('click', function (e) {
                         iPhone_mode_btn.forEach(Object => Object.setAttribute('style', ''))
                         let _btn = e.path[0].closest('div')
-                        _btn.setAttribute('style', 'border:3px solid blue')
+                        _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
                       
-                        console.log(e)
+                        // console.log(e)
                     })
                 })
             })
@@ -337,8 +337,8 @@
                     item.addEventListener('click', function (e) {
                         iphone_color_btn.forEach(Object => Object.setAttribute('style', ''))
                         let _btn = e.path[0].closest('div')
-                        _btn.setAttribute('style', 'border:3px solid blue')
-                        console.log(e)
+                        _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
+                        // console.log(e)
                     })
                 })
             })
@@ -381,8 +381,8 @@
                     item.addEventListener('click', function (e) {
                         iphone_SSD_btn.forEach(Object => Object.setAttribute('style', ''))
                         let _btn = e.path[0].closest('div')
-                        _btn.setAttribute('style', 'border:3px solid blue')
-                        console.log(e)
+                        _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
+                        // console.log(e)
                     })
                 })
             })
@@ -517,8 +517,8 @@
                     item.addEventListener('click', function (e) {
                         ipad_mode_btn.forEach(Object => Object.setAttribute('style', ''))
                         let _btn = e.path[0].closest('div')
-                        _btn.setAttribute('style', 'border:3px solid blue')
-                        console.log(e)
+                        _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
+                        // console.log(e)
                     })
                 })
             })
@@ -559,8 +559,8 @@
                     item.addEventListener('click', function (e) {
                         ipad_color_btn.forEach(Object => Object.setAttribute('style', ''))
                         let _btn = e.path[0].closest('div')
-                        _btn.setAttribute('style', 'border:3px solid blue')
-                        console.log(e)
+                        _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
+                        // console.log(e)
                     })
                 })
             })
@@ -603,8 +603,8 @@
                     item.addEventListener('click', function (e) {
                         ipad_SSD_btn.forEach(Object => Object.setAttribute('style', ''))
                         let _btn = e.path[0].closest('div')
-                        _btn.setAttribute('style', 'border:3px solid blue')
-                        console.log(e)
+                        _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
+                        // console.log(e)
                     })
                 })
             })
@@ -657,8 +657,8 @@
                     item.addEventListener('click', function (e) {
                         ipad_Connect_btn.forEach(Object => Object.setAttribute('style', ''))
                         let _btn = e.path[0].closest('div')
-                        _btn.setAttribute('style', 'border:3px solid blue')
-                        console.log(e)
+                        _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
+                        // console.log(e)
                     })
                 })
             })
@@ -703,15 +703,16 @@
         result_Other.forEach((item, index) => {
             let result_Other_index = document.querySelector(`.ipad_Other_${[index + 1]}`)
             result_Other_index.addEventListener('click', function () {
-                ipad_$.innerHTML = Connect_Asn + " " + result_Other[index].Plus;
+                ipad_$.innerHTML =  Connect_Asn_$ + " " + result_Other[index].Plus;
                 console.log(result_Other)
+
                 var ipad_Other_btn = document.querySelectorAll('.ipad_Other_btn');
                 ipad_Other_btn.forEach((item, index) => {
                     item.addEventListener('click', function (e) {
                         ipad_Other_btn.forEach(Object => Object.setAttribute('style', ''))
                         let _btn = e.path[0].closest('div')
-                        _btn.setAttribute('style', 'border:3px solid blue')
-                        console.log(e)
+                        _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
+                        // console.log(e)
                     })
                 })
             })
@@ -769,8 +770,8 @@
                     item.addEventListener('click', function (e) {
                         mac_mode_btn.forEach(Object => Object.setAttribute('style', ''))
                         let _btn = e.path[0].closest('div')
-                        _btn.setAttribute('style', 'border:3px solid blue')
-                        console.log(e)
+                        _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
+                        // console.log(e)
                     })
                 })
             })
@@ -808,8 +809,8 @@
                     item.addEventListener('click', function (e) {
                         mac_SSD_btn.forEach(Object => Object.setAttribute('style', ''))
                         let _btn = e.path[0].closest('div')
-                        _btn.setAttribute('style', 'border:3px solid blue')
-                        console.log(e)
+                        _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
+                        // console.log(e)
                     })
                 })
             })
@@ -853,8 +854,8 @@
                     item.addEventListener('click', function (e) {
                         mac_inal_Cut_Pro_btn.forEach(Object => Object.setAttribute('style', ''))
                         let _btn = e.path[0].closest('div')
-                        _btn.setAttribute('style', 'border:3px solid blue')
-                        console.log(e)
+                        _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
+                        // console.log(e)
                     })
                 })
             })
@@ -907,8 +908,8 @@
                     item.addEventListener('click', function (e) {
                         mac_Logic_Pro_btn.forEach(Object => Object.setAttribute('style', ''))
                         let _btn = e.path[0].closest('div')
-                        _btn.setAttribute('style', 'border:3px solid blue')
-                        console.log(e)
+                        _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
+                        // console.log(e)
                     })
                 })
             })
