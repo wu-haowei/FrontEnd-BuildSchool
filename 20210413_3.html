@@ -71,7 +71,7 @@
         }
 
         .box-shadow {
-     
+
             box-shadow: 0 0 10px 1px rgb(52 121 250);
         }
 
@@ -282,7 +282,7 @@
         for (let i = 0; i < result_iPhone_mode.length; i++) {
             let out = document.createElement("div");
             out.classList.add("d-flex", "justify-content-between", "align-items-center", "img_w", "p-2", "mb-1", `result_iPhone_mode_${i + 1}`, "iPhone_mode_btn", "btn");
-            out.addEventListener('click', () => {
+            out.addEventListener('click', function (e) {
                 iPhone_mode_Asn = iPhone.filter(x => x.mode == result_iPhone_mode[i].mode)
                 let iPhone_pic_img = document.getElementById('iPhone_pic_img');
                 iPhone_pic_img.src = result_iPhone_mode[i].color_imgsrc;
@@ -291,14 +291,14 @@
 
                 var iPhone_mode_btn = document.querySelectorAll('.iPhone_mode_btn');
                 iPhone_mode_btn.forEach((item, index) => {
-                    item.addEventListener('click', function (e) {
-                        iPhone_mode_btn.forEach(Object => Object.setAttribute('style', ''))
-                        let _btn = e.path[0].closest('div')
-                        _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
-                      
-                        // console.log(e)
-                    })
+                    // item.addEventListener('click', function (e) {
+                    iPhone_mode_btn.forEach(Object => Object.setAttribute('style', ''))
+                    let _btn = e.path[0].closest('div')
+                    _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
+
+                    // console.log(e)
                 })
+                // })
             })
             let inside = document.createElement("span");
             inside.classList.add("d-flex", "flex-column")
@@ -326,7 +326,7 @@
             out_B.classList.add("d-flex", "justify-content-between")
             let out_A = document.createElement('div');
             out_A.classList.add("img_w", "d-flex", "flex-column", "align-items-center", "justify-content-center", "w-100", "m-1", `ipad_color_${i + 1}`, "iphone_color_btn");
-            out_A.addEventListener('click', () => {
+            out_A.addEventListener('click', function (e) {
                 iPhone_color_Asn = iPhone_mode_Asn.filter(x => x.color == iphone_color_Picture[i].color)
                 let iPhone_pic_img = document.getElementById('iPhone_pic_img');
                 iPhone_pic_img.src = iPhone_color_Asn[0].color_imgsrc;
@@ -334,12 +334,12 @@
 
                 var iphone_color_btn = document.querySelectorAll('.iphone_color_btn');
                 iphone_color_btn.forEach((item, index) => {
-                    item.addEventListener('click', function (e) {
-                        iphone_color_btn.forEach(Object => Object.setAttribute('style', ''))
-                        let _btn = e.path[0].closest('div')
-                        _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
-                        // console.log(e)
-                    })
+                    // item.addEventListener('click', function (e) {
+                    iphone_color_btn.forEach(Object => Object.setAttribute('style', ''))
+                    let _btn = e.path[0].closest('div')
+                    _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
+                    // console.log(e)
+                    // })
                 })
             })
             let inside_img = document.createElement("img");
@@ -370,20 +370,20 @@
             let out_B = document.createElement('div');
             out_B.classList.add("d-flex", "justify-content-between")
             let out_A1 = document.createElement('div');
-            out_A1.classList.add("img_w", "d-flex", "flex-column-reverse", "align-items-center", "justify-content-center", "w-100", "m-1", `result_iPhone_SSD_${i + 1}`,"iphone_SSD_btn")
-            out_A1.addEventListener('click', () => {
+            out_A1.classList.add("img_w", "d-flex", "flex-column-reverse", "align-items-center", "justify-content-center", "w-100", "m-1", `result_iPhone_SSD_${i + 1}`, "iphone_SSD_btn")
+            out_A1.addEventListener('click', function (e) {
                 iPhone_SSD_Asn = iPhone_color_Asn.filter(x => x.SSD == result_iPhone_SSD[i].SSD)
                 iphone_$.innerHTML = "NT$" + (iPhone_SSD_Asn[0].$).substring(0, (iPhone_SSD_Asn[0].$).length - 1)
                 console.log(iPhone_SSD_Asn)
 
                 var iphone_SSD_btn = document.querySelectorAll('.iphone_SSD_btn');
                 iphone_SSD_btn.forEach((item, index) => {
-                    item.addEventListener('click', function (e) {
-                        iphone_SSD_btn.forEach(Object => Object.setAttribute('style', ''))
-                        let _btn = e.path[0].closest('div')
-                        _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
-                        // console.log(e)
-                    })
+                    // item.addEventListener('click', function (e) {
+                    iphone_SSD_btn.forEach(Object => Object.setAttribute('style', ''))
+                    let _btn = e.path[0].closest('div')
+                    _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
+                    // console.log(e)
+                    // })
                 })
             })
             let inside_A1 = document.createElement('span');
@@ -503,8 +503,8 @@
 
         for (let i = 0; i < result_mode.length; i++) {
             let out = document.createElement("div");
-            out.classList.add("d-flex", "justify-content-between", "align-items-center", "img_w", "p-2", "mb-1", `ipad_mode_${i + 1}`,"ipad_mode_btn");
-            out.addEventListener('click', () => {
+            out.classList.add("d-flex", "justify-content-between", "align-items-center", "img_w", "p-2", "mb-1", `ipad_mode_${i + 1}`, "ipad_mode_btn");
+            out.addEventListener('click', function (e) {
 
                 mode_Asn = ipad.filter(x => x.mode == result_mode[i].mode)
                 let pic_A_img = document.getElementById('pic_A_img');
@@ -514,12 +514,12 @@
 
                 var ipad_mode_btn = document.querySelectorAll('.ipad_mode_btn');
                 ipad_mode_btn.forEach((item, index) => {
-                    item.addEventListener('click', function (e) {
-                        ipad_mode_btn.forEach(Object => Object.setAttribute('style', ''))
-                        let _btn = e.path[0].closest('div')
-                        _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
-                        // console.log(e)
-                    })
+                    // item.addEventListener('click', function (e) {
+                    ipad_mode_btn.forEach(Object => Object.setAttribute('style', ''))
+                    let _btn = e.path[0].closest('div')
+                    _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
+                    // console.log(e)
+                    // })
                 })
             })
             let inside = document.createElement("span");
@@ -547,21 +547,21 @@
             let out_B = document.createElement('div');
             out_B.classList.add("d-flex", "justify-content-between")
             let out_A = document.createElement('div');
-            out_A.classList.add("img_w", "d-flex", "flex-column", "align-items-center", "justify-content-center", "w-100", "m-1", `ipad_color_${i + 1}`,"ipad_color_btn");
-            out_A.addEventListener('click', () => {
+            out_A.classList.add("img_w", "d-flex", "flex-column", "align-items-center", "justify-content-center", "w-100", "m-1", `ipad_color_${i + 1}`, "ipad_color_btn");
+            out_A.addEventListener('click', function (e) {
                 color_Asn = mode_Asn.filter(x => x.color == ipad_color_Picture[i].color)
                 let pic_A_img = document.getElementById('pic_A_img');
                 pic_A_img.src = color_Asn[0].color_imgsrc;
                 console.log(color_Asn)
-       
+
                 var ipad_color_btn = document.querySelectorAll('.ipad_color_btn');
                 ipad_color_btn.forEach((item, index) => {
-                    item.addEventListener('click', function (e) {
-                        ipad_color_btn.forEach(Object => Object.setAttribute('style', ''))
-                        let _btn = e.path[0].closest('div')
-                        _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
-                        // console.log(e)
-                    })
+                    // item.addEventListener('click', function (e) {
+                    ipad_color_btn.forEach(Object => Object.setAttribute('style', ''))
+                    let _btn = e.path[0].closest('div')
+                    _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
+                    // console.log(e)
+                    // })
                 })
             })
             let inside_img = document.createElement("img");
@@ -592,20 +592,20 @@
             let out_B = document.createElement('div');
             out_B.classList.add("d-flex", "justify-content-between")
             let out_A1 = document.createElement('div');
-            out_A1.classList.add("img_w", "d-flex", "flex-column-reverse", "align-items-center", "justify-content-center", "w-100", "m-1", `result_SSD_${i + 1}`,"ipad_SSD_btn")
-            out_A1.addEventListener('click', () => {
+            out_A1.classList.add("img_w", "d-flex", "flex-column-reverse", "align-items-center", "justify-content-center", "w-100", "m-1", `result_SSD_${i + 1}`, "ipad_SSD_btn")
+            out_A1.addEventListener('click', function (e) {
                 SSD_Asn = color_Asn.filter(x => x.SSD == result_SSD[i].SSD)
                 ipad_$.innerHTML = SSD_Asn[0].$
                 console.log(SSD_Asn)
 
                 var ipad_SSD_btn = document.querySelectorAll('.ipad_SSD_btn');
                 ipad_SSD_btn.forEach((item, index) => {
-                    item.addEventListener('click', function (e) {
-                        ipad_SSD_btn.forEach(Object => Object.setAttribute('style', ''))
-                        let _btn = e.path[0].closest('div')
-                        _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
-                        // console.log(e)
-                    })
+                    // item.addEventListener('click', function (e) {
+                    ipad_SSD_btn.forEach(Object => Object.setAttribute('style', ''))
+                    let _btn = e.path[0].closest('div')
+                    _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
+                    // console.log(e)
+                    // })
                 })
             })
             let inside_A1 = document.createElement('span');
@@ -644,9 +644,9 @@
             let out_B = document.createElement('div');
             out_B.classList.add("d-flex", "justify-content-between")
             let out_A = document.createElement('div');
-            out_A.classList.add("img_w", "d-flex", "flex-column", "align-items-center", "justify-content-center", "w-100", "m-1", `result_Connect_${i + 1}`,"ipad_Connect_btn")
+            out_A.classList.add("img_w", "d-flex", "flex-column", "align-items-center", "justify-content-center", "w-100", "m-1", `result_Connect_${i + 1}`, "ipad_Connect_btn")
 
-            out_A.addEventListener('click', () => {
+            out_A.addEventListener('click', function (e) {
                 Connect_Asn = SSD_Asn.filter(x => x.Connect == result_Connect[i].Connect)
                 Connect_Asn_$ = "NT$" + (Connect_Asn[0].$).substring(0, (Connect_Asn[0].$).length - 1); //删除最后末字符
                 ipad_$.innerHTML = Connect_Asn_$
@@ -654,12 +654,12 @@
 
                 var ipad_Connect_btn = document.querySelectorAll('.ipad_Connect_btn');
                 ipad_Connect_btn.forEach((item, index) => {
-                    item.addEventListener('click', function (e) {
-                        ipad_Connect_btn.forEach(Object => Object.setAttribute('style', ''))
-                        let _btn = e.path[0].closest('div')
-                        _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
-                        // console.log(e)
-                    })
+                    // item.addEventListener('click', function (e) {
+                    ipad_Connect_btn.forEach(Object => Object.setAttribute('style', ''))
+                    let _btn = e.path[0].closest('div')
+                    _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
+                    // console.log(e)
+                    // })
                 })
             })
             let inside_span = document.createElement("span");
@@ -684,7 +684,7 @@
         for (let i = 0; i < ipad_Other_Picture.length; i++) {
             ipad_Other.classList.add("btn-group", "d-block", "btn")
             let out = document.createElement('div');
-            out.classList.add("d-flex", "justify-content-between", "align-items-center", "img_w", "p-2", "mb-1", "flex-row-reverse", `ipad_Other_${i + 1}`,"ipad_Other_btn")
+            out.classList.add("d-flex", "justify-content-between", "align-items-center", "img_w", "p-2", "mb-1", "flex-row-reverse", `ipad_Other_${i + 1}`, "ipad_Other_btn")
             let inside = document.createElement('span');
             inside.classList.add("d-flex", "flex-column", "align-items-baseline")
             let inside_span_A = document.createElement("span");
@@ -702,18 +702,18 @@
 
         result_Other.forEach((item, index) => {
             let result_Other_index = document.querySelector(`.ipad_Other_${[index + 1]}`)
-            result_Other_index.addEventListener('click', function () {
-                ipad_$.innerHTML =  Connect_Asn_$ + " " + result_Other[index].Plus;
+            result_Other_index.addEventListener('click', function (e) {
+                ipad_$.innerHTML = Connect_Asn_$ + " " + result_Other[index].Plus;
                 console.log(result_Other)
 
                 var ipad_Other_btn = document.querySelectorAll('.ipad_Other_btn');
                 ipad_Other_btn.forEach((item, index) => {
-                    item.addEventListener('click', function (e) {
+                    // item.addEventListener('click', function (e) {
                         ipad_Other_btn.forEach(Object => Object.setAttribute('style', ''))
                         let _btn = e.path[0].closest('div')
                         _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
                         // console.log(e)
-                    })
+                    // })
                 })
             })
         })
@@ -759,20 +759,20 @@
         // console.log(mac_mode_Asn)
         for (let i = 0; i < result_mac_mode.length; i++) {
             let out = document.createElement("div");
-            out.classList.add("d-flex", "justify-content-between", "align-items-center", "img_w", "p-2", "mb-1", `result_mac_mode_${i + 1}`,"mac_mode_btn");
-            out.addEventListener('click', () => {
+            out.classList.add("d-flex", "justify-content-between", "align-items-center", "img_w", "p-2", "mb-1", `result_mac_mode_${i + 1}`, "mac_mode_btn");
+            out.addEventListener('click', function (e) {
                 mac_mode_Asn = mac.filter(x => x.mode == result_mac_mode[i].mode)
                 mac_$.innerHTML = mac_mode_Asn[0].$;
                 console.log(mac_mode_Asn)
 
                 var mac_mode_btn = document.querySelectorAll('.mac_mode_btn');
                 mac_mode_btn.forEach((item, index) => {
-                    item.addEventListener('click', function (e) {
-                        mac_mode_btn.forEach(Object => Object.setAttribute('style', ''))
-                        let _btn = e.path[0].closest('div')
-                        _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
-                        // console.log(e)
-                    })
+                    // item.addEventListener('click', function (e) {
+                    mac_mode_btn.forEach(Object => Object.setAttribute('style', ''))
+                    let _btn = e.path[0].closest('div')
+                    _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
+                    // console.log(e)
+                    // })
                 })
             })
             let inside = document.createElement("span");
@@ -798,20 +798,20 @@
 
         for (let i = 0; i < result_mac_SSD.length; i++) {
             let out = document.createElement("div");
-            out.classList.add("d-flex", "justify-content-between", "align-items-center", "img_w", "p-2", "mb-1", `result_mac_SSD_${i + 1}`,"mac_SSD_btn");
-            out.addEventListener('click', () => {
+            out.classList.add("d-flex", "justify-content-between", "align-items-center", "img_w", "p-2", "mb-1", `result_mac_SSD_${i + 1}`, "mac_SSD_btn");
+            out.addEventListener('click', function (e) {
                 mac_SSD_Asn = mac_mode_Asn.filter(x => x.SSD == result_mac_SSD[i].SSD)
                 mac_$.innerHTML = mac_SSD_Asn[i].$;
                 console.log(mac_SSD_Asn)
 
                 var mac_SSD_btn = document.querySelectorAll('.mac_SSD_btn');
                 mac_SSD_btn.forEach((item, index) => {
-                    item.addEventListener('click', function (e) {
-                        mac_SSD_btn.forEach(Object => Object.setAttribute('style', ''))
-                        let _btn = e.path[0].closest('div')
-                        _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
-                        // console.log(e)
-                    })
+                    // item.addEventListener('click', function (e) {
+                    mac_SSD_btn.forEach(Object => Object.setAttribute('style', ''))
+                    let _btn = e.path[0].closest('div')
+                    _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
+                    // console.log(e)
+                    // })
                 })
             })
             let inside = document.createElement("span");
@@ -843,20 +843,20 @@
             let out_B = document.createElement('div');
             out_B.classList.add("d-flex", "justify-content-between")
             let out_A1 = document.createElement('div');
-            out_A1.classList.add("img_w", "d-flex", "flex-column-reverse", "align-items-center", "justify-content-center", "w-100", "m-1", `result_SSD_${i + 1}`,"mac_inal_Cut_Pro_btn")
-            out_A1.addEventListener('click', () => {
+            out_A1.classList.add("img_w", "d-flex", "flex-column-reverse", "align-items-center", "justify-content-center", "w-100", "m-1", `result_SSD_${i + 1}`, "mac_inal_Cut_Pro_btn")
+            out_A1.addEventListener('click', function (e) {
                 mac_inal_Cut_Pro_Asn = mac_SSD_Asn.filter(x => x.Final_Cut_Pro == result_mac_inal_Cut_Pro[i].Final_Cut_Pro)
                 mac_$.innerHTML = mac_inal_Cut_Pro_Asn[0].$;
                 console.log(mac_inal_Cut_Pro_Asn)
 
                 var mac_inal_Cut_Pro_btn = document.querySelectorAll('.mac_inal_Cut_Pro_btn');
                 mac_inal_Cut_Pro_btn.forEach((item, index) => {
-                    item.addEventListener('click', function (e) {
-                        mac_inal_Cut_Pro_btn.forEach(Object => Object.setAttribute('style', ''))
-                        let _btn = e.path[0].closest('div')
-                        _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
-                        // console.log(e)
-                    })
+                    // item.addEventListener('click', function (e) {
+                    mac_inal_Cut_Pro_btn.forEach(Object => Object.setAttribute('style', ''))
+                    let _btn = e.path[0].closest('div')
+                    _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
+                    // console.log(e)
+                    // })
                 })
             })
             let inside_A1 = document.createElement('span');
@@ -895,8 +895,8 @@
             let out_B = document.createElement('div');
             out_B.classList.add("d-flex", "justify-content-between")
             let out_A1 = document.createElement('div');
-            out_A1.classList.add("img_w", "d-flex", "flex-column-reverse", "align-items-center", "justify-content-center", "w-100", "m-1", `result_SSD_${i + 1}`,"mac_Logic_Pro_btn")
-            out_A1.addEventListener('click', () => {
+            out_A1.classList.add("img_w", "d-flex", "flex-column-reverse", "align-items-center", "justify-content-center", "w-100", "m-1", `result_SSD_${i + 1}`, "mac_Logic_Pro_btn")
+            out_A1.addEventListener('click', function (e) {
                 mac_Logic_Pro_Asn = mac_inal_Cut_Pro_Asn.filter(x => x.Logic_Pro == result_mac_Logic_Pro[i].Logic_Pro)
 
                 mac_Logic_Pro_Asn_$ = "NT$" + (mac_Logic_Pro_Asn[0].$).substring(0, (mac_Logic_Pro_Asn[0].$).length - 1); //删除最后末字符
@@ -905,12 +905,12 @@
 
                 var mac_Logic_Pro_btn = document.querySelectorAll('.mac_Logic_Pro_btn');
                 mac_Logic_Pro_btn.forEach((item, index) => {
-                    item.addEventListener('click', function (e) {
-                        mac_Logic_Pro_btn.forEach(Object => Object.setAttribute('style', ''))
-                        let _btn = e.path[0].closest('div')
-                        _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
-                        // console.log(e)
-                    })
+                    // item.addEventListener('click', function (e) {
+                    mac_Logic_Pro_btn.forEach(Object => Object.setAttribute('style', ''))
+                    let _btn = e.path[0].closest('div')
+                    _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
+                    // console.log(e)
+                    // })
                 })
             })
             let inside_A1 = document.createElement('span');
