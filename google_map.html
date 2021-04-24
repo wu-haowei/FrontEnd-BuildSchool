@@ -79,9 +79,11 @@
 
             //更改陣列
             let Array3 = Array1.map(m => {
-                //用水縣市County 城市縣市City && 用水鄉鎮Town 城市鄉鎮District &&年分Year指定
-                let temp = Array2.filter(f => f.County == m.City && f.Town == m.District && f.Year == '108').map(m => {
-                    return `${m.Month}月的自來水用水量為${m.TheDailyDomesticConsumptionOfWaterPerPerson}`//人均每日生活用水量TheDailyDomesticConsumptionOfWaterPerPerson
+                                       //用水縣市County 城市縣市City && 用水鄉鎮Town 城市鄉鎮District &&年分Year指定
+                let temp = Array2.filter(f => f.County == m.City && f.Town == m.District && f.Year == '108')
+
+                .map(m => {return `${m.Month}月的自來水用水量為${m.TheDailyDomesticConsumptionOfWaterPerPerson}`
+                                     //人均每日生活用水量TheDailyDomesticConsumptionOfWaterPerPerson
                 });
                 return {
                     City: m.City,
@@ -108,10 +110,11 @@
                 // console.warn(infowindow)
                 // 丟到空陣列裡
                 infos.push(infowindow);
+                // console.log(infos)
                 marker.addListener("click", () => {
                     infos.forEach((item) => {
                         item.close();
-                        // console.warn(item)
+                        console.warn(item);
                     });
                     infowindow.open(map, marker);
                 });

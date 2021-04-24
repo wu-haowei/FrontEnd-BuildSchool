@@ -34,7 +34,6 @@
             border: 1px solid #d6d6d6;
             border-radius: 10px;
             min-height: 6.23529rem;
-
         }
 
         a {
@@ -49,7 +48,6 @@
 
         .new-all {
             font-size: 17px;
-            /* font-weight: 400; */
             color: #ef5602;
             line-height: 1.47059;
         }
@@ -58,25 +56,13 @@
             border-bottom: 1px solid #d6d6d6;
         }
 
-        #iphone {
-            display: none;
-        }
-
-        #ipad {
-            display: none;
-        }
-
+        #iphone,
+        #ipad,
         #mac {
             display: none;
         }
 
-        .box-shadow {
-
-            box-shadow: 0 0 10px 1px rgb(52 121 250);
-        }
-
-        .OLD {
-
+        .price {
             color: #000;
             background-color: pink;
             height: 50px;
@@ -98,7 +84,7 @@
         </div>
         <!-- 右邊 -->
         <div id="iphone">
-            <h1 id="iphone_$" class="OLD">價錢</h1>
+            <h1 id="iphone_$" class="price">價錢</h1>
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-6" id="pic_iphone">
@@ -133,7 +119,7 @@
         </div>
         <!-- **************************************ipad************************************** -->
         <div id="ipad">
-            <h1 id="ipad_$" class="OLD">價錢</h1>
+            <h1 id="ipad_$" class="price">價錢</h1>
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-6" id="pic_A">
@@ -176,7 +162,7 @@
         </div>
         <!-- **************************************mac************************************** -->
         <div id="mac">
-            <h1 id="mac_$" class="OLD">價錢</h1>
+            <h1 id="mac_$" class="price">價錢</h1>
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-6" id="pic_B">
@@ -210,13 +196,7 @@
                         </div>
                         <span><b>鍵盤語言</b></span><br>
                         <a href="#">進一步了解(鍵盤語言)</a>
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>背光巧控鍵盤 - 中文 (注音) </option>
-                            <option value="1">背光巧控鍵盤 - 美式英文</option>
-                            <option value="2">背光巧控鍵盤 - 日文 </option>
-                            <option value="3">背光巧控鍵盤 - 中文 (拼音)</option>
-                            <option value="3">背光巧控鍵盤 - 韓文</option>
-                        </select>
+                        <select id='keyboard'></select>
                         <span><b>預先安裝的軟體</b></span><br>
                         <span><b>Final Cut Pro</b></span>
                         <a href="#">進一步了解</a>
@@ -239,7 +219,6 @@
             { color: '金色', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-finish-gold-2020?wid=204&hei=204&fmt=jpeg&qlt=80&.v=1601054548000' },
             { color: '太平洋藍色', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-finish-blue-2020?wid=204&hei=204&fmt=jpeg&qlt=80&.v=1601054547000' }
         ];
-
         let iPhone =
             [
                 //---------------------6.1 吋顯示器------------------------------------------------------------------
@@ -276,7 +255,6 @@
         iphone_mode.classList.add("w-100")
         let set_iphone_mode = new Set();
         let result_iPhone_mode = iPhone.filter(item => !set_iphone_mode.has(item.mode) ? set_iphone_mode.add(item.mode) : false);
-        // console.log(result_iPhone_mode)
         let iPhone_mode_Asn = [];
 
         for (let i = 0; i < result_iPhone_mode.length; i++) {
@@ -295,7 +273,6 @@
                     iPhone_mode_btn.forEach(Object => Object.setAttribute('style', ''))
                     let _btn = e.path[0].closest('div')
                     _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
-
                     // console.log(e)
                 })
                 // })
@@ -355,7 +332,6 @@
             iphone_color.appendChild(out);
         }
         //-----------------------------iPhone-SSD----------
-
         let iphone_SSD = document.getElementById('iphone_SSD');
         iphone_SSD.classList.add("d-flex", "flex-wrap", "btn")
         let iPhone_SSD_Asn = [];
@@ -371,11 +347,11 @@
             out_B.classList.add("d-flex", "justify-content-between")
             let out_A1 = document.createElement('div');
             out_A1.classList.add("img_w", "d-flex", "flex-column-reverse", "align-items-center", "justify-content-center", "w-100", "m-1", `result_iPhone_SSD_${i + 1}`, "iphone_SSD_btn")
+
             out_A1.addEventListener('click', function (e) {
                 iPhone_SSD_Asn = iPhone_color_Asn.filter(x => x.SSD == result_iPhone_SSD[i].SSD)
                 iphone_$.innerHTML = "NT$" + (iPhone_SSD_Asn[0].$).substring(0, (iPhone_SSD_Asn[0].$).length - 1)
                 console.log(iPhone_SSD_Asn)
-
                 var iphone_SSD_btn = document.querySelectorAll('.iphone_SSD_btn');
                 iphone_SSD_btn.forEach((item, index) => {
                     // item.addEventListener('click', function (e) {
@@ -407,7 +383,6 @@
             iphone_SSD.appendChild(out);
         }
         // **********************************************************************************************************************
-
         let ipad_color_Picture = [
             { color: '太空灰色', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-space-gray-201508?wid=32&amp;hei=32&amp;fmt=png-alpha&amp;.v=0' },
             { color: '銀色', color_imgsrc: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/finish-silver-201508?wid=32&amp;hei=32&amp;fmt=png-alpha&amp;.v=0' }
@@ -494,11 +469,8 @@
         //-----------------------------ipad-尺寸----------
         let ipad_mode = document.querySelector("#ipad_mode");
         ipad_mode.classList.add("btn", "w-100")
-
         let set = new Set();
         let result_mode = ipad.filter(item => !set.has(item.mode) ? set.add(item.mode) : false);
-        // let set1 = new Set();
-        // let result_mode_color = ipad.filter(item => !set.has(item.mode + item.color) ? set.add(item.mode + item.color) : false);
         let mode_Asn = [];
 
         for (let i = 0; i < result_mode.length; i++) {
@@ -518,7 +490,7 @@
                     ipad_mode_btn.forEach(Object => Object.setAttribute('style', ''))
                     let _btn = e.path[0].closest('div')
                     _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
-                    // console.log(e)
+                    // console.table(e)
                     // })
                 })
             })
@@ -534,7 +506,6 @@
             out.appendChild(span);
             ipad_mode.appendChild(out);
         }
-
         //------------------------------ipad顏色----------
         let ipad_color = document.getElementById('ipad_color');
         ipad_color.classList.add("d-flex", "btn")
@@ -576,7 +547,6 @@
             out.appendChild(out_C);
             ipad_color.appendChild(out);
         }
-
         //-----------------------------ipad-容量----------
         let ipad_SSD = document.getElementById('ipad_SSD');
         ipad_SSD.classList.add("d-flex", "flex-wrap", "btn")
@@ -628,8 +598,6 @@
             out.appendChild(out_C);
             ipad_SSD.appendChild(out);
         }
-
-
         //-----------------------------ipad-款式----------
         let ipad_Connect = document.getElementById('ipad_Connect');
         ipad_Connect.classList.add("d-flex", "btn")
@@ -674,8 +642,6 @@
             out.appendChild(out_C);
             ipad_Connect.appendChild(out);
         }
-
-
         //------------------------------其他----------
 
         let set_Other = new Set();
@@ -709,16 +675,21 @@
                 var ipad_Other_btn = document.querySelectorAll('.ipad_Other_btn');
                 ipad_Other_btn.forEach((item, index) => {
                     // item.addEventListener('click', function (e) {
-                        ipad_Other_btn.forEach(Object => Object.setAttribute('style', ''))
-                        let _btn = e.path[0].closest('div')
-                        _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
-                        // console.log(e)
+                    ipad_Other_btn.forEach(Object => Object.setAttribute('style', ''))
+                    let _btn = e.path[0].closest('div')
+                    _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
+                    // console.log(e)
                     // })
                 })
             })
         })
-
         //**********************************************************************************
+        let mac_keyboard = [
+            { format: '背光巧控鍵盤 - 美式英文' },
+            { format: '背光巧控鍵盤 - 日文' },
+            { format: '背光巧控鍵盤 - 中文 (拼音)' },
+            { format: '背光巧控鍵盤 - 韓文' },
+        ]
         let mac =
             [
                 //---------------------8GB 統一記憶體------------------------------------------------------------------
@@ -749,14 +720,11 @@
                 { mode: ' 16GB 統一記憶體', SSD: '2TB', SSD_GB: 'SSD 儲存裝置', Final_Cut_Pro: 'Final Cut Pro', Logic_Pro: 'Logic Pro', $: '79,480起' },
             ]
         //-----------------------------mac-尺寸----------
-
         let mac_mode = document.querySelector("#mac_mode");
         mac_mode.classList.add("btn", "w-100")
         let set_mac_mode = new Set();
         let result_mac_mode = mac.filter(item => !set_mac_mode.has(item.mode) ? set_mac_mode.add(item.mode) : false);
-        // console.log(result_mac_mode)
         let mac_mode_Asn = [];
-        // console.log(mac_mode_Asn)
         for (let i = 0; i < result_mac_mode.length; i++) {
             let out = document.createElement("div");
             out.classList.add("d-flex", "justify-content-between", "align-items-center", "img_w", "p-2", "mb-1", `result_mac_mode_${i + 1}`, "mac_mode_btn");
@@ -788,12 +756,10 @@
             mac_mode.appendChild(out);
         }
         //-----------------------------mac-SSD 儲存裝置----------
-
         let mac_SSD = document.querySelector("#mac_SSD");
         mac_SSD.classList.add("btn", "w-100")
         let set_mac_SSD = new Set();
         let result_mac_SSD = mac.filter(item => !set_mac_SSD.has(item.SSD) ? set_mac_SSD.add(item.SSD) : false);
-        // console.log(result_mac_SSD)
         let mac_SSD_Asn = [];
 
         for (let i = 0; i < result_mac_SSD.length; i++) {
@@ -826,6 +792,16 @@
             out.appendChild(span);
             mac_SSD.appendChild(out);
         }
+
+        //-----------------------------鍵盤語言----------
+        const keyboard = document.getElementById('keyboard');
+        keyboard.classList.add("form-select")
+        mac_keyboard.forEach((item, index) => {
+            let option = document.createElement('option');
+            option.value = item.format;
+            option.text = item.format;
+            keyboard.add(option, null);
+        })
         //-----------------------------mac-Final Cut Pro----------
 
         let mac_inal_Cut_Pro = document.getElementById('mac_inal_Cut_Pro');
@@ -833,7 +809,6 @@
         let mac_inal_Cut_Pro_Asn = [];
         let set_mac_inal_Cut_Pro = new Set();
         let result_mac_inal_Cut_Pro = mac.filter(item => !set_mac_inal_Cut_Pro.has(item.Final_Cut_Pro) ? set_mac_inal_Cut_Pro.add(item.Final_Cut_Pro) : false);
-        // console.log(result_mac_inal_Cut_Pro)
 
         for (let i = 0; i < result_mac_inal_Cut_Pro.length; i++) {
             let out = document.createElement('div');
@@ -885,7 +860,6 @@
         let mac_Logic_Pro_Asn = [];
         let set_mac_Logic_Pro = new Set();
         let result_mac_Logic_Pro = mac.filter(item => !set_mac_Logic_Pro.has(item.Logic_Pro) ? set_mac_Logic_Pro.add(item.Logic_Pro) : false);
-        // console.log(result_mac_Logic_Pro)
 
         for (let i = 0; i < result_mac_inal_Cut_Pro.length; i++) {
             let out = document.createElement('div');
@@ -934,7 +908,6 @@
             mac_Logic_Pro.appendChild(out);
         }
         //**********************************************************************************
-
         //ipad按鈕
         let btn1 = document.getElementById('button_A')
         btn1.addEventListener('click', function () {
@@ -943,8 +916,6 @@
             document.getElementById("mac").style.display = "none";
 
         })
-
-
         //ipad按鈕
         let btn2 = document.getElementById('button_B')
         btn2.addEventListener('click', function () {
@@ -953,8 +924,6 @@
             document.getElementById("mac").style.display = "none";
 
         })
-
-
         //mac按鈕
         let btn3 = document.getElementById('button_C')
         btn3.addEventListener('click', function () {
@@ -962,13 +931,7 @@
             document.getElementById("ipad").style.display = "none";
             document.getElementById("mac").style.display = "block";
         })
-
-
-
     </script>
-
-
-
 
 
     <!-- Optional JavaScript; choose one of the two! -->
