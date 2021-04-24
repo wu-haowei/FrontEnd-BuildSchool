@@ -12,19 +12,66 @@
 
     <title>Hello, world!</title>
     <style>
-
+.aaa{
+display: flex;
+justify-content: space-around;
+}
     </style>
 </head>
 
 <body>
 
-
-
-    <div id="weekday">
+    <div id="permonth_Y">
     </div>
-
-
-
+    <div>
+        <div id="weekday">
+        </div>
+        <div class="aaa">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+        </div>
+        <div class="aaa">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+        </div>
+        <div class="aaa">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+        </div>
+        <div class="aaa">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+        </div>
+        <div class="aaa">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+        </div>
+    </div>
 
 
 
@@ -64,10 +111,26 @@
 
 
 <script>
-    let week_day = [{ day: "一" }, { day: "二" }, { day: "三" }, { day: "四" }, { day: "五" }, { day: "六" }, { day: "七" }];
+    let week_day = [{ day: "MON" }, { day: "TUE" }, { day: "WED" }, { day: "THU" }, { day: "FRI" }, { day: "SAT" }, { day: "SUN" }];
     let permonth = [{ month: "January" }, { month: "February" }, { month: "March" }, { month: "April" }, { month: "May" }, { month: "June" }, { month: "July" }, { month: "August" }, { month: "September" }, { month: "October" }, { month: "November" }, { month: "December" }];
+    let Non_leap_year = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    let leap_year = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
-    let weekday = document.querySelector("#weekday");
+    let permonth_Y = document.getElementById("permonth_Y");
+    permonth_Y.classList.add("d-flex", "justify-content-around");
+    for (let i = 0; i < permonth.length; i++) {
+        let month_A = document.createElement("div");
+        month_A.classList.add("d-flex");
+
+        month_A.innerText = permonth[i].month;
+        permonth_Y.appendChild(month_A);
+    }
+
+
+
+
+
+    let weekday = document.getElementById("weekday");
     weekday.classList.add("d-flex", "justify-content-around");
     for (let i = 0; i < week_day.length; i++) {
         let week = document.createElement("div");
@@ -76,10 +139,10 @@
     }
 
 
-    var Month = 4; // in reality, it's a parameter provided by some user input
-    var Year = 2021; // same here
-    var AllOneDate = new Date(Year, Month, 1).getDate();
-    // var AllOneweek = new Date(Year, Month, 1).getweekday();
+    // var Month = 4; // in reality, it's a parameter provided by some user input
+    // var Year = 2021; // same here
+    // var AllOneDate = new Date(Year, Month, 1).getDate();
+    // // var AllOneweek = new Date(Year, Month, 1).getweekday();
 
 
 
