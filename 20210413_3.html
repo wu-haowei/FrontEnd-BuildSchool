@@ -309,11 +309,11 @@
 
                 var iPhone_mode_btn = document.querySelectorAll('.iPhone_mode_btn');
                 // iPhone_mode_btn.forEach((item, index) => {
-                    // item.addEventListener('click', function (e) {
-                    iPhone_mode_btn.forEach(Object => Object.setAttribute('style', ''))
-                    let _btn = e.path[0].closest('div')
-                    _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
-                    console.log(e)
+                // item.addEventListener('click', function (e) {
+                iPhone_mode_btn.forEach(Object => Object.setAttribute('style', ''))
+                let _btn = e.path[0].closest('div')
+                _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
+                console.log(e)
                 // })
                 // })
             })
@@ -517,7 +517,6 @@
             let out = document.createElement("div");
             out.classList.add("d-flex", "justify-content-between", "align-items-center", "img_w", "p-2", "mb-1", `ipad_mode_${i + 1}`, "ipad_mode_btn", "font-monospace");
             out.addEventListener('click', function (e) {
-
                 mode_Asn = ipad.filter(x => x.mode == result_mode[i].mode)
                 let pic_A_img = document.getElementById('pic_A_img');
                 pic_A_img.src = result_mode[i].color_imgsrc;
@@ -525,14 +524,10 @@
                 console.log(mode_Asn)
 
                 var ipad_mode_btn = document.querySelectorAll('.ipad_mode_btn');
-                ipad_mode_btn.forEach((item, index) => {
-                    // item.addEventListener('click', function (e) {
-                    ipad_mode_btn.forEach(Object => Object.setAttribute('style', ''))
-                    let _btn = e.path[0].closest('div')
-                    _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
-                    // console.table(e)
-                    // })
-                })
+                ipad_mode_btn.forEach(x => x.setAttribute('style', ''))
+                let _btn = e.path[0].closest('div')
+                // console.warn(e)
+                _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
             })
             let inside = document.createElement("span");
             inside.classList.add("d-flex", "flex-column", "test")
@@ -567,12 +562,9 @@
 
                 var ipad_color_btn = document.querySelectorAll('.ipad_color_btn');
                 ipad_color_btn.forEach((item, index) => {
-                    // item.addEventListener('click', function (e) {
                     ipad_color_btn.forEach(Object => Object.setAttribute('style', ''))
                     let _btn = e.path[0].closest('div')
                     _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
-                    // console.log(e)
-                    // })
                 })
             })
             let inside_img = document.createElement("img");
@@ -609,14 +601,9 @@
                 console.log(SSD_Asn)
 
                 var ipad_SSD_btn = document.querySelectorAll('.ipad_SSD_btn');
-                ipad_SSD_btn.forEach((item, index) => {
-                    // item.addEventListener('click', function (e) {
-                    ipad_SSD_btn.forEach(Object => Object.setAttribute('style', ''))
-                    let _btn = e.path[0].closest('div')
-                    _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
-                    // console.log(e)
-                    // })
-                })
+                ipad_SSD_btn.forEach(Object => Object.setAttribute('style', ''))
+                let _btn = e.path[0].closest('div')
+                _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
             })
             let inside_A1 = document.createElement('span');
             let inside_span_1_1 = document.createElement('span');
@@ -661,14 +648,9 @@
                 console.log(Connect_Asn)
 
                 var ipad_Connect_btn = document.querySelectorAll('.ipad_Connect_btn');
-                ipad_Connect_btn.forEach((item, index) => {
-                    // item.addEventListener('click', function (e) {
-                    ipad_Connect_btn.forEach(Object => Object.setAttribute('style', ''))
-                    let _btn = e.path[0].closest('div')
-                    _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
-                    // console.log(e)
-                    // })
-                })
+                ipad_Connect_btn.forEach(Object => Object.setAttribute('style', ''))
+                let _btn = e.path[0].closest('div')
+                _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
             })
             let inside_span = document.createElement("span");
             inside_span.innerText = result_Connect[i].Connect;
@@ -713,14 +695,9 @@
                 console.log(result_Other)
 
                 var ipad_Other_btn = document.querySelectorAll('.ipad_Other_btn');
-                ipad_Other_btn.forEach((item, index) => {
-                    // item.addEventListener('click', function (e) {
-                    ipad_Other_btn.forEach(Object => Object.setAttribute('style', ''))
-                    let _btn = e.path[0].closest('div')
-                    _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
-                    // console.log(e)
-                    // })
-                })
+                ipad_Other_btn.forEach(Object => Object.setAttribute('style', ''))
+                let _btn = e.path[0].closest('div')
+                _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
             })
         })
         //**********************************************************************************
@@ -774,14 +751,10 @@
                 console.log(mac_mode_Asn)
 
                 var mac_mode_btn = document.querySelectorAll('.mac_mode_btn');
-                mac_mode_btn.forEach((item, index) => {
-                    // item.addEventListener('click', function (e) {
-                    mac_mode_btn.forEach(Object => Object.setAttribute('style', ''))
-                    let _btn = e.path[0].closest('div')
-                    _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
-                    // console.log(e)
-                    // })
-                })
+                mac_mode_btn.forEach(Object => Object.setAttribute('style', ''))
+                let _btn = e.path[0].closest('div')
+                _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
+
             })
             let inside = document.createElement("span");
             inside.classList.add("d-flex", "flex-column", "test")
@@ -811,14 +784,9 @@
                 console.log(mac_SSD_Asn)
 
                 var mac_SSD_btn = document.querySelectorAll('.mac_SSD_btn');
-                mac_SSD_btn.forEach((item, index) => {
-                    // item.addEventListener('click', function (e) {
-                    mac_SSD_btn.forEach(Object => Object.setAttribute('style', ''))
-                    let _btn = e.path[0].closest('div')
-                    _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
-                    // console.log(e)
-                    // })
-                })
+                mac_SSD_btn.forEach(Object => Object.setAttribute('style', ''))
+                let _btn = e.path[0].closest('div')
+                _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
             })
             let inside = document.createElement("span");
             inside.classList.add("d-flex", "flex-column", "test")
@@ -843,7 +811,6 @@
             keyboard.add(option, null);
         })
         //-----------------------------mac-Final Cut Pro----------
-
         let mac_inal_Cut_Pro = document.getElementById('mac_inal_Cut_Pro');
         mac_inal_Cut_Pro.classList.add("d-flex", "flex-wrap", "btn")
         let mac_inal_Cut_Pro_Asn = [];
@@ -865,14 +832,9 @@
                 console.log(mac_inal_Cut_Pro_Asn)
 
                 var mac_inal_Cut_Pro_btn = document.querySelectorAll('.mac_inal_Cut_Pro_btn');
-                mac_inal_Cut_Pro_btn.forEach((item, index) => {
-                    // item.addEventListener('click', function (e) {
-                    mac_inal_Cut_Pro_btn.forEach(Object => Object.setAttribute('style', ''))
-                    let _btn = e.path[0].closest('div')
-                    _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
-                    // console.log(e)
-                    // })
-                })
+                mac_inal_Cut_Pro_btn.forEach(Object => Object.setAttribute('style', ''))
+                let _btn = e.path[0].closest('div')
+                _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
             })
             let inside_A1 = document.createElement('span');
             let inside_span_1_1 = document.createElement('span');
@@ -915,16 +877,10 @@
                 mac_Logic_Pro_Asn_$ = "NT$" + (mac_Logic_Pro_Asn[0].$).substring(0, (mac_Logic_Pro_Asn[0].$).length - 1); //删除最后末字符
                 mac_$.innerHTML = mac_Logic_Pro_Asn_$
                 // console.log(mac_Logic_Pro_Asn_$)
-
                 var mac_Logic_Pro_btn = document.querySelectorAll('.mac_Logic_Pro_btn');
-                mac_Logic_Pro_btn.forEach((item, index) => {
-                    // item.addEventListener('click', function (e) {
-                    mac_Logic_Pro_btn.forEach(Object => Object.setAttribute('style', ''))
-                    let _btn = e.path[0].closest('div')
-                    _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
-                    console.log(e)
-                    // })
-                })
+                mac_Logic_Pro_btn.forEach(Object => Object.setAttribute('style', ''))
+                let _btn = e.path[0].closest('div')
+                _btn.setAttribute('style', ' box-shadow: 0 0 10px 1px rgb(52 121 250)')
             })
             let inside_A1 = document.createElement('span');
             let inside_span_1_1 = document.createElement('span');
@@ -969,7 +925,6 @@
             document.getElementById("mac").style.display = "block";
         })
     </script>
-
 
     <!-- Optional JavaScript; choose one of the two! -->
 

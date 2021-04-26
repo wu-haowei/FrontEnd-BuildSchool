@@ -132,7 +132,7 @@
         ];
     </script>
 
-    <script type='module'>
+    <script type="module">
         import { $g } from '/作業/helpers.js';
         //1.準備好Pizza資料陣列
         //2.建立Card Template
@@ -142,13 +142,10 @@
             let card = $g('#cardPizza');
             let cloneContent = card.content.cloneNode(true);
 
-
             pizzaArray.forEach((item, index) => {
                 let cloneContent = card.content.cloneNode(true);
                 cloneContent.querySelector('h5').innerText = item.name;
                 cloneContent.querySelector('img').src = item.imageurl;
-
-
                 cloneContent.querySelector('.btn').addEventListener('click', function () {
                     this.setAttribute('data-toggle', 'modal');
                     this.setAttribute('data-target', '#exampleModal');
@@ -161,7 +158,6 @@
                 row.append(cloneContent);
             })
         };
-
 
     </script>
 </body>
