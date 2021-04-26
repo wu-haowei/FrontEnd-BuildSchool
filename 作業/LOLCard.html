@@ -115,7 +115,7 @@
 
         <script>
             let employees = [];
-            const url = '/作業/champion.json';
+            const url = '/champion.json';
             let xhr = new XMLHttpRequest();
             xhr.onload = function () { 
                 employees = JSON.parse(this.responseText); 
@@ -126,7 +126,7 @@
 
         <script type='module'>
 
-            import { $g } from '/作業/helpers.js';
+            import { $g } from '/helpers.js';
 
             let row = $g('.row');
             window.onload = function () {
